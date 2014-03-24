@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Mobile 1st - CQCON</title>
+		<title>Mobile apps: Made and managed in AEM</title>
 
 		<meta name="description" content="">
 		<meta name="author" content="Bruce Lefebvre">
@@ -37,388 +37,320 @@
 			<div class="slides">
 
 				<section data-state="bg first">
-					<h1>Mobile First</h1>
-					<h3>Development with CQ Made Easy</h3><br><br>
+					<h2>Mobile apps</h2>
+					<h3>Made and managed in AEM</h3><br><br>
 					<p>
-						Bruce Lefebvre /
 						<a href="http://twitter.com/brucelefebvre"> @brucelefebvre</a>
-					</p>
-
-					
-				</section>
-
-
-
-				<section data-state="bg ottawa-bg">
-
-					
-				</section>
-
-				<section>
-					<h2>Mobile first != RWD</h2>
-					
-				</section>
-
-				<section data-state="bg moto">
-					<a class="big-link" href="http://moto.oakley.com/#roll-off-system">moto.oakley.com</a>
-					
-					
-				</section>
-
-				<section>
-					<img src="img/brad_frost_moto.png" />
-					
-				</section>
-
-				<section data-state="bg quote">
-					<blockquote>
-						<em>*</em> This website is best viewed in the <i>First World</i>
-					</blockquote>
-					<cite>Mat Marquis</cite>
-
-					
-				</section>
-
-				<section>
-					<img src="img/mdot_sample.png" />
-					
-				</section>
-
-				<section data-state="bg quote">
-					<blockquote>
-						It’s called forking, and it’s a forking nightmare from a maintenance perspective.
-					</blockquote>
-					<cite>
-						Karen McGrane
-					</cite>
-					
-				</section>
-
-				<section>
-					<img src="img/modernizr.png" />
-					<pre class="fragment"><code data-trim>
-html.touch div {
-    /* touch specific styles */
-}
-
-<script>
-	if (Modernizr.touch){
-	   // bind to touchstart, touchmove, etc
-	} else {
-	   // bind to normal click, mousemove, etc
-	}
-</script>
-					</code></pre>
-					
-				</section>
-
-				<section>
-					<img src="img/standard_site.png" />
-					
-				</section>
-
-				<section data-state="bg mashable"> 
-					<img src="img/mashable.png" />
-					
-				</section>
-
-				<section>
-					<h1>RWD</h1>
-
-					
-				</section>
-
-				<section data-state="bg quote">
-					<blockquote>Fluid grids, flexible images, and media queries are the three technical ingredients for responsive web design.</blockquote>
-					<cite>Ethan Marcotte</cite>
-
-					
-				</section>
-
-				<section>
-					<img src="img/home_iphone.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/home_ipad.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/home.png" />
-					
-				</section>
-
-				<!--
-				Fluid grids
-				-->
-				<section data-state="bg quote">
-					<blockquote class="dimmed"><span class="highlight">Fluid grids</span>, flexible images, and media queries are the three technical ingredients for responsive web design.</blockquote>
-					<cite>- Ethan Marcotte</cite>
-					
-				</section>
-
-				<section>
-					<img src="img/geometrixx-media-grid.png" />
-					
-				</section>
-
-				<section>
-					<h3>Breakpoints</h3>
-					<img class="fragment" src="img/bootstrap.png" />
-					<pre class="fragment"><code data-trim>
-/* Large desktop */
-@media (min-width: 1200px) { ... }
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) { ... }
-
-/* Landscape phones and down */
-@media (max-width: 480px) { ... }
-					</code></pre>
-					
+					</p>					
 				</section>
 
 
 				<section>
-					<h2>Your project:</h2>
+					<h2>Hello</h2>
+				</section>
+
+
+				<section>
+					<h2>Takeaways</h2>
+					<ol>
+						<li>AEM + proven open source tech</li>
+						<li>Developers apply existing web + AEM skills</li>
+						<li>Authors leverage tools they use everyday</li>
+					</ol>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Agenda</h2>
 					<ul>
-						<li class="fragment"><a href="http://twitter.github.io/bootstrap/">Bootstrap</a></li>
-						<li class="fragment"><a href="http://responsive.gs/">Responsive Grid System</a></li>
-						<li class="fragment"><a href="http://purecss.io/">PureCss</a></li>
-						<li class="fragment"><a href="http://adapt.960.gs/">960.gs + Adapt.js</a></li>
-						<li class="fragment">???</li>
-						<li class="fragment">Roll your own...</li>
-					
-				</section>
-
-				<section data-state="bg this-is-responsive">
-					<a class="big-link" href="http://bradfrost.github.io/this-is-responsive/patterns.html">
-						bradfrost.github.io/this-is-responsive/
-					</a>
-					
-				</section>
-
-
-				<section>
-					<h1>
-						Demo
-					</h1>
-					
-				</section>
-				
-
-				<!--
-				Flexible images
-				-->
-				<section data-state="bg quote">
-					<blockquote class="dimmed">Fluid grids, <span class="highlight">flexible images</span>, and media queries are the three technical ingredients for responsive web design.</blockquote>
-					<cite>Ethan Marcotte</cite>
-					
-				</section>
-
-				<section>
-					<img src="img/desktop.adaptive.before.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/desktop.adaptive.after.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/ipad.adaptive.before.png" />
-					
-				</section>
-				<section>
-					<img src="img/ipad.adaptive.after.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/iphone.adaptive.before.png" />
-					
-				</section>
-				<section>
-					<img src="img/iphone.adaptive.after.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/adaptive_chart_with_fleet.png" />
-					
-				</section>
-
-
-				<!--
-				Media queries
-				-->
-				<section data-state="bg quote">
-					<blockquote class="dimmed">Fluid grids, flexible images, and <span class="highlight">media queries</span> are the three technical ingredients for responsive web design.</blockquote>
-					<cite>Ethan Marcotte</cite>
-					
-				</section>
-				
-				<section>
-					<h3>Picturefill</h3>
-					<img class="fragment" src="img/picturefill.png" />
-					
-				</section>
-
-				<section>
-					<h3>Picturefill</h3>
-					<img src="img/picturefill_overlay_sling.png" />
-					
-				</section>
-
-				<section>
-					<h3>Picturefill</h3>
-					<img src="img/picturefill_overlay.png" />
-					
-				</section>
-
-				<section>
-					<img src="img/osgi_adaptive.png" />
-					
-				</section>
-
-
-				<section>
-					<img src="img/curling.png" />
-					<h4>adapt.[0-10000].high.jpg</h4>
-					
-				</section>
-
-
-				<section>
-					<h1>
-						Demo
-					</h1>
-					
-				</section>
-
-
-				<section>
-					<h3>Client Libraries</h3>
-					<img src="img/clientlibs_atricle_list.png" />
-					
-				</section>
-
-				<section data-state="bg quote">
-					<blockquote>Embrace the cascade.</blockquote>
-					<cite>Stephanie Rieger</cite>
-					
-				</section>
-
-				<section data-state="bg responsive-sim">
-					
-				</section>
-
-				<section>
-					<h1>
-						Demo
-					</h1>
-					
-				</section>
-
-
-				<section data-state="bg quote">
-					<blockquote>Fluid grids, flexible images, and media queries are the three technical ingredients for responsive web design.</blockquote>
-					<cite>Ethan Marcotte</cite>
-
-					
-				</section>
-
-				<section>
-					<h2>Resources</h2>
-					<ul>
-						<li>
-							<a href="http://www.abookapart.com/products/responsive-web-design">Responsive Web Design</a> - ETHAN MARCOTTE
-						</li> 
-						<li class="fragment">
-							<a href="http://www.implementingresponsivedesign.com/">Implementing Responsive Design</a> - TIM KADLEC
+						<li>Problem?</li>
+						<li>AEM Apps
+							<ul>
+								<li>Architecture
+									<ul>
+										<li>PhoneGap</li>
+										<li>Content Sync</li>
+										<li>AngularJS</li>
+									</ul>
+								</li>
+							</ul>
 						</li>
-						<li class="fragment">
-							<a href="http://www.abookapart.com/products/mobile-first">Mobile First</a> - LUKE WROBLEWSKI
-						</li>
-						<li class="fragment">
-							<a href="http://easy-readers.net/books/adaptive-web-design/">Adaptive Web Design</a> - AARON GUSTAFSON
-						</li>
-
-					</ul>
-
-					
-				</section>
-
-				<section>
-					<h2>(more)</h2>
-					<ul>
-						<li>
-							<a href="bradfrost.github.com/this-is-responsive/">This is Responsive</a> - BRAD FROST
-						</li>
-						<li>
-							<a href="https://speakerdeck.com/wilto/responsible-responsive-images-1">Responsible Responsive Images</a> - MAT MARQUIS
-						</li>
-						<li>
-							<a href="http://www.slideshare.net/yiibu/pragmatic-responsive-design">Pragmatic responsive design</a> - STEPHANIE RIEGER
-						</li>
-						<li>
-							<a href="http://www.netmagazine.com/opinions/separate-mobile-website-no-forking-way">A separate mobile website: no forking way</a> - KAREN MCGRANE
-						</li>
-						<li>
-							<a href="http://alistapart.com/blog/post/breaking-the-1000ms-time-to-glass-mobile-barrier">Breaking the 1000ms Time to Glass Mobile Barrier</a> - ILYA GRIGORIK
-						</li> 
-						<li>
-							<a href="http://repo.adobe.com/nexus/content/groups/public/com/day/jcr/vault/simple-content-package-archetype/">Simple content package archetype</a> - JUSTIN EDELSON
-						</li>
+						<li>Dev Workflow</li>
+						<li>Author Workflow</li>
 					</ul>
 				</section>
 
+
 				<section>
-					<h2>(even more)</h2>
-					<ul>
-						<li>
-							<a href="https://github.com/scottjehl/picturefill">Picturefill</a>
-						</li>
-						<li>
-							<a href="https://github.com/blefebvre/sublime-vault-build-sys">Sublime VLT build system</a>
-						</li>
-						<li>
-							<a href="http://modernizr.com/">Modernizr</a>
-						</li>
-						<li>
-							<a href="https://twitter.com/brad_frost/status/326423168342450178/">Brad Frost on twitter</a>
-						</li>
-						<li>
-							<a href="http://moto.oakley.com/">Oakley Airbrake MX</a>
-						</li>
-						<li>
-							<a href="http://www.ottawacitizen.com/touch/index.html">The Ottawa Citizen</a>
-						</li>
-						<li>
-							<a href="http://mashable.com/2012/12/11/responsive-web-design/">The Year of RWD</a> - Mashable
-						</li>
-					</ul>
+					<h2>Problem?</h2>
+					<div class=fragment>
+						<img src=img/shit_review_0.png alt="a shitty review"/>
+					</div>
+
+					<aside class="notes">
+						<p>
+							&quot;Don’t download, its not worth your time just go on the website or your phone browser or computer&quot;
+						</p>
+					</aside>
 				</section>
 
-				<section data-state="bg quote">
-					<blockquote>Everyone is now trying to return the web to it's inherently fluid state. And that's <em>perfect</em>.</blockquote>
-					<cite>Brad Frost</cite>
+
+				<section>
+					<div>
+						<img src=img/shit_review_1.png alt="a shitty review"/>
+					</div>
+
+					<aside class="notes">
+						<p>
+							&quot;I could navigate the website Faster than this … It’s nice to have glitter and flash but you need to do it better than this&quot;
+						</p>
+					</aside>
 				</section>
+
+
+				<section>
+					<div>
+						<img src=img/shit_review_2.png alt="a shitty review"/>
+					</div>
+
+					<aside class="notes">
+						<p>
+							&quot;To say it’s buggy would be an insult to insects&quot;
+						</p>
+					</aside>
+				</section>
+
+
+				<section>
+					<div>
+						<img src=img/shit_review_3.png alt="a shitty review"/>
+					</div>
+
+					<aside class="notes">
+						<p>
+							&quot;Sticking to paper as it is a reliable source of getting what I need&quot;
+						</p>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Mobile apps are hard</h2>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section>
+					<img src=img/apple.png>
+					<img src=img/andy.png>
+					<img src=img/windows.png>
+					<img src=img/bb.png>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Content re-use across mediums</h2>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Manage that content efficiently</h2>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Challenges</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>features present on mobile devices</li>
+							<li>Including sensors, touch, notifications</li>
+							<li>Manage constraints</li>
+							<li>Including performance, battery, connectivity</li>
+							<li>Keep it relevant</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Introducing AEM Apps</h2>
+					<img src=img/aem-appz.png>
+
+					<aside class="notes">
+						<ul>
+							<li>VP drew an interesting parallel: 1995</li>
+							<li>Manage customer experience from one place</li>
+							<li>giving marketing control
+								<ul>
+									<li>like they have over the their web content</li>
+									<li>reduce the burden on IT</li>
+									<li>focus on developing new experiences instead of simply maintaining old ones</li>
+								</ul>
+							</li>
+							<li>Including performance, battery, connectivity</li>
+							<li>Keep it relevant</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Now</h2>
+					<ul>
+						<li>Modify apps w/o writing code</li>
+						<li>Re-purpose business flows</li>
+						<li>'Over the air' content updates</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>same tools used to author sites</li>
+							<li>ACLs, workflows</li>
+							<li>content updates</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Architecture</h2>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Proven technologies</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>AEM - 12 years</li>
+							<li>PhoneGap - 5 yrs</li>
+							<li>AngularJS - 5 yrs</li>
+							<li>+ friends</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>PhoneGap</h2>
+					<img src=img/pg_logo.png />
+
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Platforms</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>Web as the OS</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>CLI</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>slick API</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Device-level APIs</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>Features *not* avail to sites
+								<ul>
+									<li>Camera</li>
+									<li>Geolocation</li>
+									<li>Accelerometer</li>
+									<li>File system</li>
+									<li>Contacts</li>
+									<li>Events</li>
+									<li>Connection</li>
+									<li>Notification</li>
+								</ul>
+							</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Demo time</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>PG CLI</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<img src=img/pg_apps_featured.png />
+
+					<aside class="notes">
+						<ul>
+							<li>app samples</li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+
+<!-- TEMPLATE
+				<section>
+					<h2></h2>
+
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+-->
+
+
 
 				<section>
 					<h3>Thank you</h3>
 					<p>
 						<a href="https://twitter.com/brucelefebvre">@brucelefebvre</a>
-					</p>
-					<br>
-					<p> 
-						<a href="http://brucelefebvre.com/assets/cqcon-mobile-first/">http://brucelefebvre.com/assets/cqcon-mobile-first/</a>
-					</p>
-					<p> 
-						<a href="https://github.com/blefebvre/cqcon-rwd-demo">https://github.com/blefebvre/cqcon-rwd-demo</a>
 					</p>
 				</section>
 
