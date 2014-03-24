@@ -1,0 +1,107 @@
+.reveal section img {
+	border: none;
+	box-shadow: none;
+}
+
+.bg body {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* TYPE */
+.reveal, .reveal a:not(.image),.reveal a:not(.image):hover {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #333;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-shadow: none;
+	color: #333;
+}
+
+/* BACKGROUNDS */
+.ottawa-bg body {
+	background-image: url(../../img/will_skateway.jpg);
+}
+
+.mashable-bg body {
+	background-image: url(../../img/mashable.png);
+}
+
+.first body {
+	background-image: url(../../img/cq_con_logo.png);
+	background-position: center 95%;
+	background-size: 20%;
+}
+
+.moto body {
+	background-image: url(../../img/moto.png);
+}
+
+.quote body {
+	background-image: url(../../img/quote2.png);
+}
+
+.responsive-sim body {
+	background-image: url(../../img/responsive_sim.png);
+}
+
+.this-is-responsive body {
+	background-image: url(../../img/this_is_responsive.png);
+}
+
+/* Full screen image links */
+.reveal a.big-link, .reveal a.big-link:visited {
+	text-align: right;
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	margin-top: 5em;
+	margin-left: -12em;
+	padding: .3em;
+	background-color:rgba(51,51,51,.8);
+}
+
+.reveal blockquote {
+	font-size:1.5em;
+	line-height: 1.2em;
+	width: 85%;
+	font-style: normal;
+	background-color:rgba(255,255,255,0.5);
+}
+
+.reveal blockquote.dimmed, .reveal p.dimmed {
+	color: #ccc;
+}
+
+blockquote .highlight {
+	color: #333;
+}
+
+.reveal blockquote em {
+	color: red;
+}
+
+.reveal cite {
+	display: block;
+	width: 85%;
+	text-align: right;
+	margin: .5em auto;
+}
+
+#preload {
+	visibility: hidden;
+}

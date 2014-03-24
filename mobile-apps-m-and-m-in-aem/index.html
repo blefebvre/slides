@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mobile 1st - CQCON</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Bruce Lefebvre">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/theme/cqcon-overrides.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-state="bg first">
+					<h1>Mobile First</h1>
+					<h3>Development with CQ Made Easy</h3><br><br>
+					<p>
+						Bruce Lefebvre /
+						<a href="http://twitter.com/brucelefebvre"> @brucelefebvre</a>
+					</p>
+
+					
+				</section>
+
+
+
+				<section data-state="bg ottawa-bg">
+
+					
+				</section>
+
+				<section>
+					<h2>Mobile first != RWD</h2>
+					
+				</section>
+
+				<section data-state="bg moto">
+					<a class="big-link" href="http://moto.oakley.com/#roll-off-system">moto.oakley.com</a>
+					
+					
+				</section>
+
+				<section>
+					<img src="img/brad_frost_moto.png" />
+					
+				</section>
+
+				<section data-state="bg quote">
+					<blockquote>
+						<em>*</em> This website is best viewed in the <i>First World</i>
+					</blockquote>
+					<cite>Mat Marquis</cite>
+
+					
+				</section>
+
+				<section>
+					<img src="img/mdot_sample.png" />
+					
+				</section>
+
+				<section data-state="bg quote">
+					<blockquote>
+						It’s called forking, and it’s a forking nightmare from a maintenance perspective.
+					</blockquote>
+					<cite>
+						Karen McGrane
+					</cite>
+					
+				</section>
+
+				<section>
+					<img src="img/modernizr.png" />
+					<pre class="fragment"><code data-trim>
+html.touch div {
+    /* touch specific styles */
+}
+
+<script>
+	if (Modernizr.touch){
+	   // bind to touchstart, touchmove, etc
+	} else {
+	   // bind to normal click, mousemove, etc
+	}
+</script>
+					</code></pre>
+					
+				</section>
+
+				<section>
+					<img src="img/standard_site.png" />
+					
+				</section>
+
+				<section data-state="bg mashable"> 
+					<img src="img/mashable.png" />
+					
+				</section>
+
+				<section>
+					<h1>RWD</h1>
+
+					
+				</section>
+
+				<section data-state="bg quote">
+					<blockquote>Fluid grids, flexible images, and media queries are the three technical ingredients for responsive web design.</blockquote>
+					<cite>Ethan Marcotte</cite>
+
+					
+				</section>
+
+				<section>
+					<img src="img/home_iphone.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/home_ipad.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/home.png" />
+					
+				</section>
+
+				<!--
+				Fluid grids
+				-->
+				<section data-state="bg quote">
+					<blockquote class="dimmed"><span class="highlight">Fluid grids</span>, flexible images, and media queries are the three technical ingredients for responsive web design.</blockquote>
+					<cite>- Ethan Marcotte</cite>
+					
+				</section>
+
+				<section>
+					<img src="img/geometrixx-media-grid.png" />
+					
+				</section>
+
+				<section>
+					<h3>Breakpoints</h3>
+					<img class="fragment" src="img/bootstrap.png" />
+					<pre class="fragment"><code data-trim>
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) { ... }
+
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
+					</code></pre>
+					
+				</section>
+
+
+				<section>
+					<h2>Your project:</h2>
+					<ul>
+						<li class="fragment"><a href="http://twitter.github.io/bootstrap/">Bootstrap</a></li>
+						<li class="fragment"><a href="http://responsive.gs/">Responsive Grid System</a></li>
+						<li class="fragment"><a href="http://purecss.io/">PureCss</a></li>
+						<li class="fragment"><a href="http://adapt.960.gs/">960.gs + Adapt.js</a></li>
+						<li class="fragment">???</li>
+						<li class="fragment">Roll your own...</li>
+					
+				</section>
+
+				<section data-state="bg this-is-responsive">
+					<a class="big-link" href="http://bradfrost.github.io/this-is-responsive/patterns.html">
+						bradfrost.github.io/this-is-responsive/
+					</a>
+					
+				</section>
+
+
+				<section>
+					<h1>
+						Demo
+					</h1>
+					
+				</section>
+				
+
+				<!--
+				Flexible images
+				-->
+				<section data-state="bg quote">
+					<blockquote class="dimmed">Fluid grids, <span class="highlight">flexible images</span>, and media queries are the three technical ingredients for responsive web design.</blockquote>
+					<cite>Ethan Marcotte</cite>
+					
+				</section>
+
+				<section>
+					<img src="img/desktop.adaptive.before.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/desktop.adaptive.after.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/ipad.adaptive.before.png" />
+					
+				</section>
+				<section>
+					<img src="img/ipad.adaptive.after.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/iphone.adaptive.before.png" />
+					
+				</section>
+				<section>
+					<img src="img/iphone.adaptive.after.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/adaptive_chart_with_fleet.png" />
+					
+				</section>
+
+
+				<!--
+				Media queries
+				-->
+				<section data-state="bg quote">
+					<blockquote class="dimmed">Fluid grids, flexible images, and <span class="highlight">media queries</span> are the three technical ingredients for responsive web design.</blockquote>
+					<cite>Ethan Marcotte</cite>
+					
+				</section>
+				
+				<section>
+					<h3>Picturefill</h3>
+					<img class="fragment" src="img/picturefill.png" />
+					
+				</section>
+
+				<section>
+					<h3>Picturefill</h3>
+					<img src="img/picturefill_overlay_sling.png" />
+					
+				</section>
+
+				<section>
+					<h3>Picturefill</h3>
+					<img src="img/picturefill_overlay.png" />
+					
+				</section>
+
+				<section>
+					<img src="img/osgi_adaptive.png" />
+					
+				</section>
+
+
+				<section>
+					<img src="img/curling.png" />
+					<h4>adapt.[0-10000].high.jpg</h4>
+					
+				</section>
+
+
+				<section>
+					<h1>
+						Demo
+					</h1>
+					
+				</section>
+
+
+				<section>
+					<h3>Client Libraries</h3>
+					<img src="img/clientlibs_atricle_list.png" />
+					
+				</section>
+
+				<section data-state="bg quote">
+					<blockquote>Embrace the cascade.</blockquote>
+					<cite>Stephanie Rieger</cite>
+					
+				</section>
+
+				<section data-state="bg responsive-sim">
+					
+				</section>
+
+				<section>
+					<h1>
+						Demo
+					</h1>
+					
+				</section>
+
+
+				<section data-state="bg quote">
+					<blockquote>Fluid grids, flexible images, and media queries are the three technical ingredients for responsive web design.</blockquote>
+					<cite>Ethan Marcotte</cite>
+
+					
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li>
+							<a href="http://www.abookapart.com/products/responsive-web-design">Responsive Web Design</a> - ETHAN MARCOTTE
+						</li> 
+						<li class="fragment">
+							<a href="http://www.implementingresponsivedesign.com/">Implementing Responsive Design</a> - TIM KADLEC
+						</li>
+						<li class="fragment">
+							<a href="http://www.abookapart.com/products/mobile-first">Mobile First</a> - LUKE WROBLEWSKI
+						</li>
+						<li class="fragment">
+							<a href="http://easy-readers.net/books/adaptive-web-design/">Adaptive Web Design</a> - AARON GUSTAFSON
+						</li>
+
+					</ul>
+
+					
+				</section>
+
+				<section>
+					<h2>(more)</h2>
+					<ul>
+						<li>
+							<a href="bradfrost.github.com/this-is-responsive/">This is Responsive</a> - BRAD FROST
+						</li>
+						<li>
+							<a href="https://speakerdeck.com/wilto/responsible-responsive-images-1">Responsible Responsive Images</a> - MAT MARQUIS
+						</li>
+						<li>
+							<a href="http://www.slideshare.net/yiibu/pragmatic-responsive-design">Pragmatic responsive design</a> - STEPHANIE RIEGER
+						</li>
+						<li>
+							<a href="http://www.netmagazine.com/opinions/separate-mobile-website-no-forking-way">A separate mobile website: no forking way</a> - KAREN MCGRANE
+						</li>
+						<li>
+							<a href="http://alistapart.com/blog/post/breaking-the-1000ms-time-to-glass-mobile-barrier">Breaking the 1000ms Time to Glass Mobile Barrier</a> - ILYA GRIGORIK
+						</li> 
+						<li>
+							<a href="http://repo.adobe.com/nexus/content/groups/public/com/day/jcr/vault/simple-content-package-archetype/">Simple content package archetype</a> - JUSTIN EDELSON
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>(even more)</h2>
+					<ul>
+						<li>
+							<a href="https://github.com/scottjehl/picturefill">Picturefill</a>
+						</li>
+						<li>
+							<a href="https://github.com/blefebvre/sublime-vault-build-sys">Sublime VLT build system</a>
+						</li>
+						<li>
+							<a href="http://modernizr.com/">Modernizr</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/brad_frost/status/326423168342450178/">Brad Frost on twitter</a>
+						</li>
+						<li>
+							<a href="http://moto.oakley.com/">Oakley Airbrake MX</a>
+						</li>
+						<li>
+							<a href="http://www.ottawacitizen.com/touch/index.html">The Ottawa Citizen</a>
+						</li>
+						<li>
+							<a href="http://mashable.com/2012/12/11/responsive-web-design/">The Year of RWD</a> - Mashable
+						</li>
+					</ul>
+				</section>
+
+				<section data-state="bg quote">
+					<blockquote>Everyone is now trying to return the web to it's inherently fluid state. And that's <em>perfect</em>.</blockquote>
+					<cite>Brad Frost</cite>
+				</section>
+
+				<section>
+					<h3>Thank you</h3>
+					<p>
+						<a href="https://twitter.com/brucelefebvre">@brucelefebvre</a>
+					</p>
+					<br>
+					<p> 
+						<a href="http://brucelefebvre.com/assets/cqcon-mobile-first/">http://brucelefebvre.com/assets/cqcon-mobile-first/</a>
+					</p>
+					<p> 
+						<a href="https://github.com/blefebvre/cqcon-rwd-demo">https://github.com/blefebvre/cqcon-rwd-demo</a>
+					</p>
+				</section>
+
+				<!--
+				<section>
+					
+				</section>
+				-->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+				rollingLinks: false,
+				overview: false,
+
+				transition: 'none', 
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		<div id="preload">
+			<img src="img/will_skateway.jpg" />
+			<img src="img/mashable.png" />
+			<img src="img/moto.png" />
+			<img src="img/quote2.png" />
+			<img src="img/this_is_responsive.png" />
+			<img src="img/responsive_sim.png" />
+		</div>
+
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-41891145-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+
+	</body>
+</html>
