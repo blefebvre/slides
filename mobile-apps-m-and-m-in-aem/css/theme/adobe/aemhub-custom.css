@@ -1,0 +1,74 @@
+table.takeaways td {
+	background: #D6C0D7;
+	color: #333;
+	border-right: 4px solid #FFF;
+	padding: 1em .8em;
+	width: 33%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+table.takeaways tr:first-child td {
+	padding-bottom: 0 ;
+}
+
+table.takeaways {
+	padding: 1em;
+}
+
+table.takeaways tr.numbers td {
+	text-align: center;
+}
+
+.agenda pre {
+	font-family: source-code;
+	font-size: 1.2em;
+	width: 75%;
+	background-color: rgb(63, 63, 63);
+}
+
+.reveal .slides section .fragment.highlight-green.visible,
+.agenda .highlight {
+	color:rgb(46, 228, 0);
+}
+
+table.platforms {
+	width: 100%;
+}
+
+table.platforms td.icon {
+	text-align: right;
+}
+
+table.platforms tr:first-child td {
+	padding-bottom: 2em;
+}
+
+table.platforms div {
+	display: inline-block;
+	background: url(../../../../img/platforms.svg) 0 0 no-repeat;
+	height: 60px;
+}
+
+table.platforms div.ios {
+	width: 50px;
+}
+
+table.platforms div.android {
+	width: 50px;
+	background-position: -50px 0;
+}
+
+table.platforms div.windows {
+	width: 50px;
+	background-position: -100px 0;
+}
+
+table.platforms div.bb {
+	width: 50px;
+	background-position: -150px 0;
+}
+
+table.platforms td {
+	vertical-align: middle;
+}

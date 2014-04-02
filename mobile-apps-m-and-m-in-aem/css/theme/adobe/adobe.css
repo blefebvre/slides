@@ -237,8 +237,8 @@ body {
   src: url('../../../font/SourceSansPro-ExtraLight.otf'); 
 }
 @font-face { 
-  font-family: "source-code"; src: 
-  url('../../../font/SourceCodePro-Regular.otf'); 
+  font-family: "source-code"; 
+  src: url('../../../font/SourceCodePro-Regular.otf'); 
 }
 
 /* yah I did - brianleroux */
@@ -273,8 +273,4 @@ body:after {
 
 .reveal section img {
   border: none;
-}
-
-.platform-table td {
-  vertical-align: middle;
 }

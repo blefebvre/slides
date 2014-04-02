@@ -15,6 +15,7 @@
 
 		<link rel=stylesheet href=css/reveal.min.css>
 		<link rel=stylesheet href=css/theme/adobe/adobe.css id=theme>
+		<link rel=stylesheet href=css/theme/adobe/aemhub-custom.css>
 		<link rel=stylesheet href=lib/css/zenburn.css>
 
 		<!-- For syntax highlighting -->
@@ -47,10 +48,14 @@
 				<section data-state="bg-white">
 					<h2>Mobile apps</h2>
 					<h3>Made and managed in AEM</h3>
+					<br>
+					<p>
+						<img src="img/aem_hub.png" style="box-shadow:none"/>
+					</p>
 				</section>
 
 
-				<section>
+				<section data-state="bg-white">
 					<h2>Hello</h2>
 					<br>
 					<p>
@@ -59,45 +64,59 @@
 				</section>
 
 
-				<section>
+				<!-- Takeaways -->
+				<section data-state="bg-white">
 					<h2>Takeaways</h2>
-					<ol>
-						<li>AEM + proven open source tech</li>
-						<li>Developers apply existing web + AEM skills</li>
-						<li>Authors leverage tools they use everyday</li>
-					</ol>
+					<table class="takeaways" cellspacing="0">
+						<tr class="numbers">
+							<td>|</td>
+							<td>| |</td>
+							<td>| | |</td>
+						</tr>
+						<tr>
+							<td>
+								AEM + proven open source tech
+							</td>
+							<td>
+								Developers apply existing web + AEM skills
+							</td>
+							<td>
+								Authors leverage tools they use everyday
+							</td>
+						</tr>
+					</table>
 					<aside class="notes">
 
 					</aside>
 				</section>
 
 
-				<section>
+				<!-- AGENDA -->
+				<section data-state="bg-white">
 					<h2>Agenda</h2>
-					<ul>
-						<li>Problem?</li>
-						<li>AEM Apps
-							<ul>
-								<li>Architecture
-									<ul>
-										<li>PhoneGap</li>
-										<li>Content Sync</li>
-										<li>AngularJS</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>Dev Workflow</li>
-						<li>Author Workflow</li>
-					</ul>
+					<div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- <span class="fragment highlight-green">Problem?</span>
+      |-- Architecture
+      |   |-- PhoneGap
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- Dev Workflow
+      `-- Author Workflow
+
+</pre>
+					</div>
 				</section>
 
 
+				<!-- Problem? -->
 				<section>
-					<h2>Problem?</h2>
-					<div class=fragment>
-						<img src=img/shit_review_0.png alt="a shitty review"/>
-					</div>
+					<blockquote>
+						“Bullshit ... Don’t download, its not worth your time just go on the website or your phone browser or computer”
+					</blockquote>
+					<img src="img/shit_review_0.png" alt="a shitty review"/>
 
 					<aside class="notes">
 						<p>
@@ -108,35 +127,10 @@
 
 
 				<section>
-					<div>
-						<img src=img/shit_review_1.png alt="a shitty review"/>
-					</div>
-
-					<aside class="notes">
-						<p>
-							&quot;I could navigate the website Faster than this … It’s nice to have glitter and flash but you need to do it better than this&quot;
-						</p>
-					</aside>
-				</section>
-
-
-				<section>
-					<div>
-						<img src=img/shit_review_2.png alt="a shitty review"/>
-					</div>
-
-					<aside class="notes">
-						<p>
-							&quot;To say it’s buggy would be an insult to insects&quot;
-						</p>
-					</aside>
-				</section>
-
-
-				<section>
-					<div>
-						<img src=img/shit_review_3.png alt="a shitty review"/>
-					</div>
+					<blockquote>
+						“Sticking to paper as it is a reliable source of getting what I need”
+					</blockquote>
+					<img src=img/shit_review_3.png alt="a shitty review"/>
 
 					<aside class="notes">
 						<p>
@@ -156,33 +150,33 @@
 
 
 				<section>
-					<table class="platform-table">
+					<table class="platforms">
 						<tr>
-							<td width="100">
-								<img src=img/apple.png>
+							<td class="icon">
+								<div class="ios"></div>
 							</td>
 							<td>
-								Objective-C
+								<span class="fragment">Objective-C</span>
 							</td>
-							<td width="100">
-								<img src=img/windows.png>
+							<td class="icon">
+								<div class="android"></div>
 							</td>
 							<td>
-								C#, C++
+								<span class="fragment">Java</span>
 							</td>
 						</tr>
 						<tr>
-							<td>
-								<img src=img/andy.png>
+							<td class="icon">
+								<div class="windows"></div>
 							</td>
 							<td>
-								Java
+								<span class="fragment">C#, C++</span>
+							</td>
+							<td class="icon">
+								<div class="bb"></div>
 							</td>
 							<td>
-								<img src=img/bb.png>
-							</td>
-							<td>
-								Java
+								<span class="fragment">Java</span>
 							</td>
 						</tr>
 					</table>
@@ -228,33 +222,31 @@
 				</section>
 
 
-				<section>
-					<h2>Introducing AEM Apps</h2>
-					<img src=img/aem-appz.png>
+				<section data-state="bg-white">
+					<h2>AEM Apps</h2>
+					<img src="img/aem-appz.png">
 
 					<aside class="notes">
 						<ul>
 							<li>VP drew an interesting parallel: 1995</li>
 							<li>Manage customer experience from one place</li>
-							<li>giving marketing control
+							<li>give marketing control
 								<ul>
-									<li>like they have over the their web content</li>
-									<li>reduce the burden on IT</li>
-									<li>focus on developing new experiences instead of simply maintaining old ones</li>
+									<li>like over their web content</li>
+									<li>reduce burden on IT</li>
+									<li>focus on dev new experiences instead of simply maintaining old ones</li>
 								</ul>
 							</li>
-							<li>Including performance, battery, connectivity</li>
-							<li>Keep it relevant</li>
 						</ul>
 					</aside>
 				</section>
 
 
-				<section>
+				<section data-state="bg-white">
 					<h2>Now</h2>
 					<ul>
-						<li>Modify apps w/o writing code</li>
-						<li>Re-purpose business flows</li>
+						<li>Modify app content w/o writing code</li>
+						<li>Re-use business flows</li>
 						<li>'Over the air' content updates</li>
 					</ul>
 
@@ -268,12 +260,23 @@
 				</section>
 
 
-				<section>
-					<h2>Architecture</h2>
+				<!-- AGENDA - Architecture-->
+				<section data-state="bg-white">
+					<h2>Agenda</h2>
+					<div class="agenda">
+<pre>
 
-					<aside class="notes">
+  `-- &lt;root&gt;
+      |-- Problem?
+      |-- <span class="highlight">Architecture</span>
+      |   |-- PhoneGap
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- Dev Workflow
+      `-- Author Workflow
 
-					</aside>
+</pre>
+					</div>
 				</section>
 
 
