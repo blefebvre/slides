@@ -65,7 +65,7 @@
 					<br>
 					<p>
 						<a href="http://twitter.com/brucelefebvre"> @brucelefebvre</a>
-					</p>					
+					</p>
 				</section>
 
 
@@ -106,6 +106,8 @@
       |-- <span class="fragment highlight-green">Problem?</span>
       |-- Architecture
       |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
       |   |-- Content Sync
       |   `-- AngularJS
       |-- Dev Workflow
@@ -275,6 +277,8 @@
       |-- Problem?
       |-- <span class="highlight">Architecture</span>
       |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
       |   |-- Content Sync
       |   `-- AngularJS
       |-- Dev Workflow
@@ -287,7 +291,7 @@
 
 				<!-- Tech -->
 				<section data-state="bg-white">
-					<h2>Proven technologies</h2>
+					<h2>Proven tech</h2>
 
 					<table class="technologies">
 						<tr>
@@ -309,6 +313,7 @@
 				</section>
 
 
+				<!-- PhoneGap -->
 				<section data-state="bg-white">
 					<h2>PhoneGap</h2>
 
@@ -322,8 +327,19 @@
 					</table>
 				</section>
 
+
 				<section>
 					<h2>Platforms</h2>
+
+					<ul>
+						<li>iOS</li>
+						<li>Android</li>
+						<li>WP7, WP8, Windows 8</li>
+						<li>BB10</li>
+						<li>Amazon Fire OS</li>
+						<li>Tizen</li>
+						<li>and more...</li>
+					</ul>
 
 					<aside class="notes">
 						<ul>
@@ -336,6 +352,8 @@
 				<section>
 					<h2>CLI</h2>
 
+					<h4>as of 3.0</h4>
+
 					<aside class="notes">
 						<ul>
 							<li>slick API</li>
@@ -344,23 +362,36 @@
 				</section>
 
 
+
 				<section>
-					<h2>Device-level APIs</h2>
+					<h2>Plugins</h2>
+
+					<!-- todo: image of geo out app and site -->
 
 					<aside class="notes">
 						<ul>
-							<li>Features *not* avail to sites
-								<ul>
-									<li>Camera</li>
-									<li>Geolocation</li>
-									<li>Accelerometer</li>
-									<li>File system</li>
-									<li>Contacts</li>
-									<li>Events</li>
-									<li>Connection</li>
-									<li>Notification</li>
-								</ul>
-							</li>
+							<li>separate app from mobile site</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Device-level APIs</h2>
+
+					<ul>
+						<li>Camera</li>
+						<li>Accelerometer</li>
+						<li>File system</li>
+						<li>Contacts</li>
+						<li>Events</li>
+						<li>Connection</li>
+						<li>Notification</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Features *not* avail to sites</li>
 						</ul>
 					</aside>
 				</section>
@@ -378,7 +409,7 @@
 
 
 				<section>
-					<img src=img/pg_apps_featured.png />
+					<img src="img/pg_apps_featured.png" />
 
 					<aside class="notes">
 						<ul>
@@ -388,6 +419,34 @@
 				</section>
 
 
+				<!-- Angular -->
+				<section data-state="bg-white">
+					<h2>AngularJS</h2>
+
+					<table class="technologies">
+						<tr>
+							<td><img src="img/AEM_logo.png" /></td>
+							<td><img src="img/pg_logo.png" /></td>
+							<td class="highlight-pink"><img src="img/angularjs-logo.png" /></td>
+							<td><img src="img/cs_noun_3048.png" /></td>
+						</tr>
+					</table>
+				</section>
+
+
+				<!-- Content Sync -->
+				<section data-state="bg-white">
+					<h2>Content Sync</h2>
+
+					<table class="technologies">
+						<tr>
+							<td><img src="img/AEM_logo.png" /></td>
+							<td><img src="img/pg_logo.png" /></td>
+							<td><img src="img/angularjs-logo.png" /></td>
+							<td class="highlight-pink"><img src="img/cs_noun_3048.png" /></td>
+						</tr>
+					</table>
+				</section>
 
 
 <!-- TEMPLATE
@@ -438,7 +497,9 @@
 					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+
 				]
 			});
 		</script>
