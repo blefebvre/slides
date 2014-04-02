@@ -46,7 +46,7 @@ table.platforms tr:first-child td {
 
 table.platforms div {
 	display: inline-block;
-	background: url(../../../../img/platforms.svg) 0 0 no-repeat;
+	background: url(platforms.svg) 0 0 no-repeat;
 	height: 60px;
 }
 
