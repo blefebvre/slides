@@ -89,7 +89,13 @@ table.technologies td {
 
 .reveal .slides section .highlight-pink {
 }
+
 .reveal .slides section .highlight-pink img {
 	box-shadow: none;
 	background-color: #D6C0D7;
+}
+
+.reveal section img.no-bg {
+	background: none;
+	box-shadow: none;
 }

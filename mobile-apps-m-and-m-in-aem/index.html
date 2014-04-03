@@ -49,6 +49,8 @@
 					<h2>Mobile apps</h2>
 					<h3>Made and managed in AEM</h3>
 					<br>
+					<br>
+					<br>
 					<p>
 						<img src="img/aem_hub.png" style="box-shadow:none"/>
 					</p>
@@ -342,6 +344,12 @@
 
 
 				<section>
+					<h3>Apps built with web tech</h3>
+					<h3>you know and love</h3>
+				</section>
+
+
+				<section>
 					<h2>Platforms</h2>
 
 					<ul>
@@ -379,7 +387,7 @@
 				<section>
 					<h2>Plugins</h2>
 
-					<!-- todo: image of geo out app and site -->
+					<img src="img/app-vs-site.png" class="no-bg"/>
 
 					<aside class="notes">
 						<ul>
@@ -414,19 +422,16 @@
 
 				<section>
 					<h2>Hooks</h2>
-
-
-
 					<aside class="notes">
 						<ul>
-							<li>Features *not* avail to sites</li>
-							<li>roll your own: reuse existing code</li>
+							<li>tie in to any part of the build</li>
+							<li>install plugins, copy assets, etc.</li>
 						</ul>
 					</aside>
 				</section>
 
 
-				<section>
+				<section data-state="alert">
 					<h2>Demo time</h2>
 
 					<aside class="notes">
@@ -439,7 +444,7 @@
 
 
 				<section>
-					<img src="img/pg_apps_featured.png" />
+					<img src="img/pg_apps_featured.png" class="no-bg"/>
 
 					<aside class="notes">
 						<ul>
@@ -464,6 +469,96 @@
 				</section>
 
 
+				<section>
+					<h2>Why Angular?</h2>
+					<img src="img/framework_trends.png" class="no-bg"/>
+
+					<aside class="notes">
+						<ul>
+							<li>google trends</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Why Angular?</h2>
+					<img src="img/exciting-tech.png" class="no-bg"/>
+
+					<aside class="notes">
+						<ul>
+							<li>stackoverflow survey</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>AngularJS</h2>
+
+					<ul>
+						<li>Opinionated</li>
+						<li>Two-way data binding</li>
+						<li>Components (aka Directives)</li>
+						<li>Single page apps</li>
+						<li>Dependency injection</li>
+						<li>Community</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Listening to the people</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>AngularJS Projects</h2>
+
+					<ul>
+						<li>
+							<a href="http://ionicframework.com/">Ionic</a>
+						</li>
+						<li>
+							<a href="https://github.com/jtrussell/angular-snap.js">Angular Snap.js</a>
+						</li>
+						<li>
+							<a href="https://github.com/btford/angular-phonegap-ready">angular-phonegap-ready</a>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>open source projects built on angular</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Angular + AEM Challenges</h2>
+
+					<ul>
+						<li>Bring SPA paradigm to CMS</li>
+						<li>Author mode VS. client side templating
+							<ul>
+								<li>Access control</li>
+								<li>Model &amp; view separation</li>
+								<li>Reusability of author’s skills</li>
+							</ul>
+						</li>
+
+						<li>Performance</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
 				<!-- Content Sync -->
 				<section data-state="bg-white">
 					<h2>Content Sync</h2>
@@ -479,6 +574,95 @@
 				</section>
 
 
+				<section data-state="bg-white">
+					<img src="img/content-sync-flow.png"/>
+				</section>
+
+
+				<section data-state="bg-white">
+					<h2>Handlers – new in 6.0</h2>
+
+					<ul>
+						<li>mobileapprootpage</li>
+						<li>mobileapppages</li>
+						<li>mobilepageassets</li>
+						<li>mobilecontentlisting</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>manage the SPA</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<!-- AGENDA - Dev-->
+				<section data-state="bg-white">
+					<h2>Agenda</h2>
+					<div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- Problem?
+      |-- Architecture
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- <span class="highlight">Dev Workflow</span>
+      `-- Author Workflow
+
+</pre>
+					</div>
+				</section>
+
+
+				<section data-state="alert">
+					<h2>Demo time</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>dev builds component</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<!-- AGENDA - Author-->
+				<section data-state="bg-white">
+					<h2>Agenda</h2>
+					<div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- Problem?
+      |-- Architecture
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- Dev Workflow
+      `-- <span class="highlight">Author Workflow</span>
+
+</pre>
+					</div>
+				</section>
+
+
+				<section data-state="alert">
+					<h2>Demo time</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>author updates app</li>
+						</ul>
+					</aside>
+				</section>
+
+
 <!-- TEMPLATE
 				<section>
 					<h2></h2>
@@ -491,6 +675,37 @@
 				</section>
 -->
 
+
+				<!-- Takeaways -->
+				<section data-state="bg-white">
+					<h2>Takeaways</h2>
+					<table class="takeaways" cellspacing="0">
+						<tr class="numbers">
+							<td>|</td>
+							<td>| |</td>
+							<td>| | |</td>
+						</tr>
+						<tr>
+							<td>
+								AEM + proven open source tech
+							</td>
+							<td>
+								Developers apply existing web + AEM skills
+							</td>
+							<td>
+								Authors leverage tools they use everyday
+							</td>
+						</tr>
+					</table>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section data-state="soothe">
+					<h2>Q &amp; A</h2>
+				</section>
 
 
 				<section>
