@@ -205,22 +205,14 @@
 						<ul>
 							<li>mobile, web, now app</li>
 							<li>enable reuse - not via email</li>
+							<li>Manage that content efficiently</li>
 						</ul>
 					</aside>
 				</section>
 
 
 				<section>
-					<h2>Manage that content efficiently</h2>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-
-				<section>
-					<h2>Challenges</h2>
+					<h2>Opportunities</h2>
 
 					<aside class="notes">
 						<ul>
@@ -267,6 +259,20 @@
 							<li>same tools used to author sites</li>
 							<li>ACLs, workflows</li>
 							<li>content updates</li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<section>
+					<h2>Analytics</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>Mobile services</li>
+							<li>AEM makes analytics easy</li>
+							<li>instrument our apps</li>
 						</ul>
 					</aside>
 				</section>
@@ -383,6 +389,43 @@
 				</section>
 
 
+				<section>
+					<h2>CLI commands</h2>
+
+					<div class="cli-commands">
+<pre>
+  create &lt;path&gt;
+  build &lt;platform&gt;
+  install &lt;platform&gt;
+  run &lt;platform&gt;
+  local [command]
+  <span class="fragment highlight-green">remote [command]</span>
+  platform [command]
+  plugin [command]
+  help [command]
+  version
+</pre>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>manage, automate builds</li>
+							<li>remote</li>
+						</ul>
+					</aside>
+				</section>
+				
+
+				<section>
+					<h2>PhoneGap Build</h2>
+
+					<aside class="notes">
+						<ul>
+							<li>build apps without native SDKs</li>
+							<li>integrates with github</li>
+						</ul>
+					</aside>
+				</section>
+
 
 				<section>
 					<h2>Plugins</h2>
@@ -426,6 +469,30 @@
 						<ul>
 							<li>tie in to any part of the build</li>
 							<li>install plugins, copy assets, etc.</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Phases</h2>
+					<ul>
+						<li>build</li>
+						<li>compile</li>
+						<li>docs</li>
+						<li>emulate</li>
+						<li>plugin_ls</li>
+						<li>plugin_rm</li>
+						<li>plugin_add</li>
+						<li>platform_ls</li>
+						<li>platform_rm</li>
+						<li>platform_add</li>
+						<li>prepare</li>
+						<li>run</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>order</li>
 						</ul>
 					</aside>
 				</section>
@@ -555,6 +622,59 @@
 					<aside class="notes">
 						<ul>
 							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Angular + AEM</h2>
+
+					<h3>Routing</h3>
+
+<pre><code>
+$routeProvider
+    .when('/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home', {
+        templateUrl: 'home.template.html' + cacheKiller,
+        controller: 'contentphonegapgeometrixxappsnggeometrixxoutdoorsenhome'
+    })
+
+</code></pre>
+
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<section>
+					<h2>Angular + AEM</h2>
+
+					<h3>Controllers</h3>
+
+<pre><code>
+// Controller for page 'home'
+.controller('contentphonegapgeometrixxappsnggeometrixxoutdoorsenhome', 
+	['$scope', '$http',
+		function($scope, $http) {
+		    var data = $http.get('home.angular.json' + cacheKiller);
+
+		    /* ng_swipe_carousel component controller (path: content-par/ng_swipe_carousel) */
+		    data.then(function(response) {
+		        $scope.playSpeed = response.data["content-par/ng_swipe_carousel"].playSpeed;
+		        $scope.contentparngswipecarousel = response.data["content-par/ng_swipe_carousel"].items;
+		    });
+		    
+		}])
+
+</code></pre>
+
+					<aside class="notes">
+						<ul>
+							<li>wiring up the model</li>
 						</ul>
 					</aside>
 				</section>

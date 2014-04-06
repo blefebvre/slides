@@ -20,6 +20,11 @@ table.takeaways tr.numbers td {
 	text-align: center;
 }
 
+.cli-commands pre {
+	width:35%;
+	font-size: .7em;
+}
+
 .agenda pre {
 	font-family: source-code;
 	font-size: 1.2em;
