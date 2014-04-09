@@ -104,3 +104,9 @@ table.technologies td {
 	background: none;
 	box-shadow: none;
 }
+
+.reveal pre.beer-art {
+	width: 19em;
+	border: 0;
+	box-shadow: none;
+}
