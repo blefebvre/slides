@@ -481,11 +481,47 @@
 
                 <section>
                     <h2>PhoneGap Build</h2>
+                    <img src="img/buildbot-hero.png" class="pg-build" />
 
                     <aside class="notes">
                         <ul>
                             <li>build apps without native SDKs</li>
                             <li>integrates with github</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Hooks</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>tie in to any part of the build</li>
+                            <li>install plugins, copy assets, etc.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Phases</h2>
+                    <ul>
+                        <li>build</li>
+                        <li>compile</li>
+                        <li>docs</li>
+                        <li>emulate</li>
+                        <li>plugin_ls</li>
+                        <li>plugin_rm</li>
+                        <li>plugin_add</li>
+                        <li>platform_ls</li>
+                        <li>platform_rm</li>
+                        <li>platform_add</li>
+                        <li>prepare</li>
+                        <li>run</li>
+                    </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>order</li>
                         </ul>
                     </aside>
                 </section>
@@ -527,41 +563,6 @@
                 </section>
 
 
-                <section>
-                    <h2>Hooks</h2>
-                    <aside class="notes">
-                        <ul>
-                            <li>tie in to any part of the build</li>
-                            <li>install plugins, copy assets, etc.</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h2>Phases</h2>
-                    <ul>
-                        <li>build</li>
-                        <li>compile</li>
-                        <li>docs</li>
-                        <li>emulate</li>
-                        <li>plugin_ls</li>
-                        <li>plugin_rm</li>
-                        <li>plugin_add</li>
-                        <li>platform_ls</li>
-                        <li>platform_rm</li>
-                        <li>platform_add</li>
-                        <li>prepare</li>
-                        <li>run</li>
-                    </ul>
-                    <aside class="notes">
-                        <ul>
-                            <li>order</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
                 <section data-state="alert">
                     <h2>Demo time</h2>
 
@@ -584,7 +585,7 @@
                     </aside>
                 </section>
 
-                
+
                 <!-- Angular -->
                 <section data-state="bg-white">
                     <h2>AngularJS</h2>
@@ -1004,6 +1005,20 @@ $routeProvider
 
                 ]
             });
+        </script>
+        
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-41891145-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
         </script>
 
     </body>

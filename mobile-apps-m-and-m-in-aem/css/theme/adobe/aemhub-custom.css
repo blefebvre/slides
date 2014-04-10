@@ -110,3 +110,9 @@ table.technologies td {
 	border: 0;
 	box-shadow: none;
 }
+
+.reveal img.pg-build {
+	background: none; 
+	box-shadow: none;
+	width: 10em;
+}
