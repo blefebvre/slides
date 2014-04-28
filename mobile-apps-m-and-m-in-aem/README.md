@@ -3,6 +3,10 @@ Mobile apps: Made and managed in AEM
 
 This deck was presented at [AEMHub 2014](http://aemhub.cognifide.com/speakers.html#Bruce-Lefebvre) in London.
 
+#### Alt title
+
+> Better together: Building apps with AEM and PhoneGap
+
 #### Abstract
 
 > This session will focus on the PhoneGap integration featured in the upcoming release of AEM 6.0. We'll confront the challenges facing both developers and content authors in the mobile application space and discuss how AEM can help. I'll dive into a technical review of the architecture, discuss the component model we developed to bring AEM and AngularJS together, and demo the development workflow of building a real mobile app with AEM.
