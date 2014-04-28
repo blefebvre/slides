@@ -24,6 +24,12 @@ From a similar deck presented at [SUMMIT](https://adobesummit.activeevents.com/2
 >
 > This session applies to all industries and is for content marketers, developers, and anyone interested in improving mobile reach.
 
+#### Apache-ish abstract for adaptTo()
+
+Title: Mobile app development with Apache Cordova and AEM
+
+> Building and maintaining effective mobile applications presents several challenges, from supporting multiple platforms to managing frequently updated content. This session will focus on the Apache Cordova integration featured in the upcoming release of AEM 6.0. We'll confront the challenges facing both developers and content authors in the mobile application space and discuss how AEM Apps can help. I'll dive into a technical review of the architecture, discuss the component model we developed to bring AEM and AngularJS together, and demo the development workflow of building a real mobile app with the integration.
+
 #### Bio
 
 Bruce is a programmer at Adobe focussed on bringing AEM and the open web together. As a member of the mobile research & development team, he was responsible for building the responsive design reference application (Geometrixx Media) that shipped with 5.6. Lately, Bruce has been technically leading mobile development in AEM, driving the integration with PhoneGap.
