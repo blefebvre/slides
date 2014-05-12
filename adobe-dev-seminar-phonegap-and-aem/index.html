@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Mobile apps: Made and managed in AEM</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="Bruce Lefebvre">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel=stylesheet href=css/reveal.min.css>
+        <link rel=stylesheet href=css/theme/adobe/adobe.css id=theme>
+        <link rel=stylesheet href=css/theme/adobe/aemhub-custom.css>
+        <link rel=stylesheet href=lib/css/zenburn.css>
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <!--
+            States:
+                data-state="bg-white"
+                data-state="bg-red"
+                data-state="alert"
+                data-state="soothe"
+        -->
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section data-state="bg-white">
+                    <h2>Mobile apps</h2>
+                    <h3>Made and managed in AEM</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <p>
+                        <img src="img/aem_hub.png" style="box-shadow:none"/>
+                    </p>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>welcome</li>
+                            <li>beer</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-background="img/mem_box_phones.jpg" data-background-transition="slide">
+
+                    <aside class="notes">
+                        <ul>
+                            <li>hoarder</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <h2>Hello</h2>
+                    <br>
+                    <p>
+                        <a href="http://twitter.com/brucelefebvre"> @brucelefebvre</a>
+                    </p>
+                    <aside class="notes">
+                        <ul>
+                            <li>built this integration, like to show it off</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Takeaways -->
+                <section data-state="bg-white">
+                    <h2>Takeaways</h2>
+                    <table class="takeaways" cellspacing="0">
+                        <tr class="numbers">
+                            <td>|</td>
+                            <td>| |</td>
+                            <td>| | |</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                AEM + proven open source tech
+                            </td>
+                            <td>
+                                Developers apply existing web + AEM skills
+                            </td>
+                            <td>
+                                Authors leverage tools they use everyday
+                            </td>
+                        </tr>
+                    </table>
+                    <aside class="notes">
+                        <ul>
+                            <li>3 key takeaways</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA -->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- <span class="fragment highlight-green">Problem?</span>
+      |-- Architecture
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- Dev Workflow
+      `-- Author Workflow
+
+</pre>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>address the problem</li>
+                            <li>tasked with building an app...</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Problem? -->
+                <section>
+                    <blockquote>
+                        “Don’t download, its not worth your time just go on the website or your phone browser or computer”
+                    </blockquote>
+                    <img src="img/shit_review_0.png" alt="a shitty review"/>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>&quot;Don’t download, its not worth your time just go on the website or your phone browser or computer&quot;</li>
+                            <li>performance expectations - despite identical hardware</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <blockquote>
+                        “Sticking to paper as it is a reliable source of getting what I need”
+                    </blockquote>
+                    <img src="img/shit_review_3.png" alt="a shitty review"/>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>&quot;Sticking to paper as it is a reliable source of getting what I need&quot;</li>
+                            <li>stability - can't count on browser</li>
+                            <li>bad reviews are bad for business</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Mobile apps are hard</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>point is...</li>
+                            <li>number of reasons</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <table class="platforms">
+                        <tr>
+                            <td class="icon">
+                                <div class="ios"></div>
+                            </td>
+                            <td>
+                                <span class="fragment">Objective-C</span>
+                            </td>
+                            <td class="icon">
+                                <div class="android"></div>
+                            </td>
+                            <td>
+                                <span class="fragment">Java</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="icon">
+                                <div class="windows"></div>
+                            </td>
+                            <td>
+                                <span class="fragment">C#, C++</span>
+                            </td>
+                            <td class="icon">
+                                <div class="bb"></div>
+                            </td>
+                            <td>
+                                <span class="fragment">Java</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>different platforms</li>
+                            <li>different programming languages</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Content re-use across mediums</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>mobile, web, now app</li>
+                            <li>enable reuse - not via email</li>
+                            <li>Manage that content efficiently</li>
+                            <li>Keep it relevant</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Constraints</h2>
+                    <ul>
+                        <li>Performance</li>
+                        <li>Battery</li>
+                        <li>Connectivity</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="soothe">
+                    <h2>Opportunities</h2>
+                    <ul>
+                        <li>Touch</li>
+                        <li>Sensors</li>
+                        <li>Notifications</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>features available to mobile devices</li>
+                            <li>Manage constraints</li>
+                            <li>Including performance, battery, connectivity</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <h2>AEM Apps</h2>
+                    <img src="img/aem-appz.png">
+
+                    <aside class="notes">
+                        <ul>
+                            <li>VP drew an interesting parallel: 1995</li>
+                            <li>Manage customer experience from one place</li>
+                            <li>give marketing control
+                                <ul>
+                                    <li>like over their web content</li>
+                                    <li>reduce burden on IT</li>
+                                    <li>focus on dev new experiences instead of simply maintaining old ones</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <h2>Now</h2>
+                    <ul>
+                        <li>Modify app content w/o writing code</li>
+                        <li>Re-use author &amp; business workflows</li>
+                        <li>Deliver 'Over the air' content updates</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>same tools used to author sites</li>
+                            <li>ACLs, workflows</li>
+                            <li>highlight store hours use case</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <h2>Analytics</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Mobile services</li>
+                            <li>AEM makes analytics easy</li>
+                            <li>instrument our apps</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-background="img/mobile-services.png" data-background-transition="slide" data-background-size="contain">
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>devices</li>
+                            <li>app versions</li>
+                            <li>launches</li>
+                            <li>session length</li>
+                            <li>ecom: shopping cart completion &amp; abandonment</li>
+                            <li>session length</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA - Architecture-->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- Problem?
+      |-- <span class="highlight">Architecture</span>
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- Dev Workflow
+      `-- Author Workflow
+
+</pre>
+                    </div>
+                </section>
+
+
+                <!-- Tech -->
+                <section data-state="bg-white">
+                    <h2>Proven tech</h2>
+
+                    <table class="technologies">
+                        <tr>
+                            <td><img src="img/AEM_logo.png" /></td>
+                            <td><img src="img/pg_logo.png" /></td>
+                            <td><img src="img/angularjs-logo.png" /></td>
+                            <td><img src="img/cs_noun_3048.png" /></td>
+                        </tr>
+                    </table>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>AEM - 12 years</li>
+                            <li>PhoneGap - 5 yrs</li>
+                            <li>AngularJS - 5 yrs</li>
+                            <li>CS - since 5.4</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- PhoneGap -->
+                <section data-state="bg-white">
+                    <h2>PhoneGap</h2>
+
+                    <table class="technologies">
+                        <tr>
+                            <td><img src="img/AEM_logo.png" /></td>
+                            <td class="highlight-pink"><img src="img/pg_logo.png" /></td>
+                            <td><img src="img/angularjs-logo.png" /></td>
+                            <td><img src="img/cs_noun_3048.png" /></td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                <section>
+                    <h3>Apps built with web tech</h3>
+                    <h3>you know and love</h3>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>web browser</li>
+                            <li>augmented with JS bridge</li>
+                            <li>access to device level</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Platforms</h2>
+
+                    <ul>
+                        <li>iOS</li>
+                        <li>Android</li>
+                        <li>WP7, WP8, Windows 8</li>
+                        <li>BB10</li>
+                        <li>Amazon Fire OS</li>
+                        <li>Tizen</li>
+                        <li>and more...</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Web as the OS</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>PhoneGap CLI</h2>
+
+                    <h4>as of 3.0</h4>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Command line interface</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>CLI commands</h2>
+
+                    <div class="cli-commands">
+<pre>
+  create &lt;path&gt;
+  build &lt;platform&gt;
+  install &lt;platform&gt;
+  run &lt;platform&gt;
+  local [command]
+  <span class="fragment highlight-green">remote [command]</span>
+  platform [command]
+  plugin [command]
+  help [command]
+  version
+</pre>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>manage, automate builds</li>
+                            <li>remote</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+
+                <section>
+                    <h2>PhoneGap Build</h2>
+                    <img src="img/buildbot-hero.png" class="pg-build" />
+
+                    <aside class="notes">
+                        <ul>
+                            <li>build apps without native SDKs</li>
+                            <li>integrates with github</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Hooks</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>tie in to any part of the build</li>
+                            <li>install plugins, copy assets, etc.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Phases</h2>
+                    <ul>
+                        <li>build</li>
+                        <li>compile</li>
+                        <li>docs</li>
+                        <li>emulate</li>
+                        <li>plugin_ls</li>
+                        <li>plugin_rm</li>
+                        <li>plugin_add</li>
+                        <li>platform_ls</li>
+                        <li>platform_rm</li>
+                        <li>platform_add</li>
+                        <li>prepare</li>
+                        <li>run</li>
+                    </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>order</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Plugins</h2>
+
+                    <img src="img/app-vs-site.png" class="no-bg"/>
+
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Device-level APIs</h2>
+
+                    <ul>
+                        <li>Camera</li>
+                        <li>Accelerometer</li>
+                        <li>File system</li>
+                        <li>Contacts</li>
+                        <li>Events</li>
+                        <li>Connection</li>
+                        <li>Notification</li>
+                        <li>&lt;your plugin here&gt;</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Features *not* avail to sites</li>
+                            <li>roll your own: reuse existing code</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="alert">
+                    <h2>Demo time</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>PG CLI</li>
+                            <li>open up dir, show Xcode project</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <img src="img/pg_apps_featured.png" class="no-bg"/>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>app samples</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Angular -->
+                <section data-state="bg-white">
+                    <h2>AngularJS</h2>
+
+                    <table class="technologies">
+                        <tr>
+                            <td><img src="img/AEM_logo.png" /></td>
+                            <td><img src="img/pg_logo.png" /></td>
+                            <td class="highlight-pink"><img src="img/angularjs-logo.png" /></td>
+                            <td><img src="img/cs_noun_3048.png" /></td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                <section>
+                    <h2>Why Angular?</h2>
+                    <img src="img/framework_trends.png" class="no-bg"/>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>google trends</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Why Angular?</h2>
+                    <img src="img/exciting-tech.png" class="no-bg"/>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>stackoverflow survey</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>AngularJS</h2>
+
+                    <ul>
+                        <li>Opinionated</li>
+                        <li>Two-way data binding</li>
+                        <li>Components (aka Directives)</li>
+                        <li>Single page apps</li>
+                        <li>Dependency injection</li>
+                        <li>Community</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Listening to the people</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>AngularJS Projects</h2>
+
+                    <ul>
+                        <li>
+                            Ionic Framework
+                        </li>
+                        <li>
+                            Angular Snap.js
+                        </li>
+                        <li>
+                            angular-phonegap-ready
+                        </li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>open source projects built on angular</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Angular + AEM Challenges</h2>
+
+                    <ul>
+                        <li>Bring SPA paradigm to CMS</li>
+                        <li>Author mode VS. client side templating
+                            <ul>
+                                <li>Access control</li>
+                                <li>Model &amp; view separation</li>
+                                <li>Reusability of author’s skills</li>
+                            </ul>
+                        </li>
+
+                        <li>Performance</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Angular + AEM</h2>
+
+                    <h3>Routing</h3>
+
+<pre><code>
+$routeProvider
+    .when('/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home', {
+        templateUrl: 'home.template.html' + cacheKiller,
+        controller: 'geometrixxoutdoorsenhome'
+    })
+
+</code></pre>
+
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+
+                <section>
+                    <h2>Angular + AEM</h2>
+
+                    <h3>Controllers</h3>
+
+<pre><code>
+// Controller for page 'home'
+.controller('geometrixxoutdoorsenhome', 
+    ['$scope', '$http',
+        function($scope, $http) {
+            var data = $http.get('home.angular.json' + cacheKiller);
+
+            /* swipe_carousel component controller */
+            data.then(function(response) {
+                $scope.playSpeed = 
+                    response.data["content-par/swipe_carousel"].playSpeed;
+                $scope.contentparngswipecarousel = 
+                    response.data["content-par/swipe_carousel"].items;
+            });
+            
+        }
+    ])
+
+</code></pre>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>wiring up the model</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Content Sync -->
+                <section data-state="bg-white">
+                    <h2>Content Sync</h2>
+
+                    <table class="technologies">
+                        <tr>
+                            <td><img src="img/AEM_logo.png" /></td>
+                            <td><img src="img/pg_logo.png" /></td>
+                            <td><img src="img/angularjs-logo.png" /></td>
+                            <td class="highlight-pink"><img src="img/cs_noun_3048.png" /></td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <img src="img/content-sync-flow.png"/>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <h2>Handlers – new in 6.0</h2>
+
+                    <ul>
+                        <li>mobileapprootpage</li>
+                        <li>mobileapppages</li>
+                        <li>mobilepageassets</li>
+                        <li>mobilecontentlisting</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>manage the SPA</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA - Dev-->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- Problem?
+      |-- Architecture
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- <span class="highlight">Dev Workflow</span>
+      `-- Author Workflow
+
+</pre>
+                    </div>
+                </section>
+
+
+                <section data-state="alert">
+                    <h2>Demo time</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>dev builds component</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA - Author-->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- Problem?
+      |-- Architecture
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |   |-- Content Sync
+      |   `-- AngularJS
+      |-- Dev Workflow
+      `-- <span class="highlight">Author Workflow</span>
+
+</pre>
+                    </div>
+                </section>
+
+
+                <section data-state="alert">
+                    <h2>Demo time</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>author updates app</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+<!-- TEMPLATE
+                <section>
+                    <h2></h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+-->
+
+
+                <!-- Takeaways -->
+                <section data-state="bg-white">
+                    <h2>Takeaways</h2>
+                    <table class="takeaways" cellspacing="0">
+                        <tr class="numbers">
+                            <td>|</td>
+                            <td>| |</td>
+                            <td>| | |</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                AEM + proven open source tech
+                            </td>
+                            <td>
+                                Developers apply existing web + AEM skills
+                            </td>
+                            <td>
+                                Authors leverage tools they use everyday
+                            </td>
+                        </tr>
+                    </table>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+
+                <section data-state="soothe">
+                    <h2>Q &amp; A</h2>
+
+                    <h3>bit.ly/aem-pg</h3>
+
+                    <img src="img/qrcode.png"/>
+                </section>
+
+
+                <section>
+                    <h3>Thank you</h3>
+<pre class="beer-art">
+             _, . '__ . 
+          '_(_0o),(__)o().
+        ,o(__),_)o(_)O,(__)o
+      o(_,-o(_ )(),(__(_)oO)_
+      .O(__)o,__).(_ )o(_)Oo_)
+  .----|   |   |   |   |   |_)0
+ /  .--|   |   |   |   |   |,_)
+|  /   |   |   |   |   |   |o(_)
+|  |   |   |   |   |   |   |_/`)
+|  |   |   |   |   |   |   |O_) 
+|  |   |   |   |   |   |   |
+|  \   |   |   |   |   |   |
+ \  '--|   |   |   |   |   |
+  '----|   |   |   |   |   |
+       |   |   |   |   |   |
+  jgs  \   \   \   /   /   /
+        `"""""""""""""""""`
+</pre>
+                    <p>
+                        <a href="https://twitter.com/brucelefebvre">@brucelefebvre</a>
+                    </p>
+                </section>
+
+
+                <section>
+                    <h2>References</h2>
+                    <ul>
+                        <li>
+                            <a href="http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/" target="_blank">PhoneGap, Cordova, and what’s in a name?</a> - <a href="https://twitter.com/brianleroux" target="_blank">Brian LeRoux</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/phonegap/phonegap-cli" target="_blank">PhoneGap CLI on Github</a>
+                        </li>
+                        <li>
+                            <a href="http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/" target="_blank">Three hooks your Cordova/PhoneGap project needs</a> - <a href="https://twitter.com/mooreds" target="_blank">Dan Moore</a>
+                        </li>
+                        <li>
+                            <a href="http://angularjs.org/" target="_blank">AngularJS</a>
+                        </li>
+                        <li>
+                            <a href="http://ionicframework.com/" target="_blank">Ionic Framework</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jtrussell/angular-snap.js" target="_blank">Angular Snap.js</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/btford/angular-phonegap-ready" target="_blank">angular-phonegap-ready</a>
+                        </li>
+                        <li>
+                            <a href="http://dev.day.com/docs/en/cq/current/developing/mobile/contentsync.html" target="_blank">Content Sync docs</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/phonegap/phonegap/wiki/Debugging-in-PhoneGap" target="_blank">Debugging in PhoneGap</a>
+                        </li>
+                        <li>
+                            <a href="http://thenounproject.com/noun/package/#icon-No3048" target="_blank">Package</a> designed by <a href="http://thenounproject.com/hakan" target="_blank">Hakan Yalcin</a> from The Noun Project
+                        </li>
+                        <li>
+                            <a href="http://www.ascii-art.com/" target="_blank">Mug of beer</a> by Joan G. Stark
+                        </li>
+                        <li>
+                            <a href="https://github.com/brianleroux/slides/tree/gh-pages/yow-2013" target="_blank">Reveal.js theme</a> by <a href="https://twitter.com/brianleroux" target="_blank">Brian LeRoux</a>
+                        </li>
+                    </ul>
+                </section>
+
+
+                <!--
+                <section>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+                -->
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: 'linear', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+
+                ]
+            });
+        </script>
+        
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-41891145-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+
+    </body>
+</html>
