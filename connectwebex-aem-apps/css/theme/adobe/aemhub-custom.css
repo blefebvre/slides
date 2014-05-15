@@ -1,0 +1,118 @@
+table.takeaways td {
+	background-color: #D6C0D7;
+	color: #333;
+	border-right: 4px solid #FFF;
+	padding: 1em .8em;
+	width: 33%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+table.takeaways tr:first-child td {
+	padding-bottom: 0 ;
+}
+
+table.takeaways {
+	padding: 1em;
+}
+
+table.takeaways tr.numbers td {
+	text-align: center;
+}
+
+.cli-commands pre {
+	width:35%;
+	font-size: .7em;
+}
+
+.agenda pre {
+	font-family: source-code;
+	font-size: 1.2em;
+	width: 75%;
+	background-color: rgb(63, 63, 63);
+}
+
+.reveal .slides section .fragment.highlight-green.visible,
+.agenda .highlight {
+	color:rgb(46, 228, 0);
+}
+
+table.platforms {
+	width: 100%;
+}
+
+table.platforms td.icon {
+	text-align: right;
+}
+
+table.platforms tr:first-child td {
+	padding-bottom: 2em;
+}
+
+table.platforms div {
+	display: inline-block;
+	background: url(platforms.svg) 0 0 no-repeat;
+	height: 60px;
+}
+
+table.platforms div.ios {
+	width: 50px;
+}
+
+table.platforms div.android {
+	width: 50px;
+	background-position: -50px 0;
+}
+
+table.platforms div.windows {
+	width: 50px;
+	background-position: -100px 0;
+}
+
+table.platforms div.bb {
+	width: 50px;
+	background-position: -150px 0;
+}
+
+table.platforms td {
+	vertical-align: middle;
+}
+
+.bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5,
+.bg-white ul {
+	color:#333;
+}
+
+.reveal section img {
+	border: none;
+}
+
+table.technologies td {
+	width: 25%;
+	vertical-align: middle;
+}
+
+.reveal .slides section .highlight-pink {
+}
+
+.reveal .slides section .highlight-pink img {
+	box-shadow: none;
+	background-color: #D6C0D7;
+}
+
+.reveal section img.no-bg {
+	background: none;
+	box-shadow: none;
+}
+
+.reveal pre.beer-art {
+	width: 19em;
+	border: 0;
+	box-shadow: none;
+}
+
+.reveal img.pg-build {
+	background: none; 
+	box-shadow: none;
+	width: 10em;
+}
