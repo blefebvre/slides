@@ -27,7 +27,7 @@ table.takeaways tr.numbers td {
 
 .agenda pre {
 	font-family: source-code;
-	font-size: 1.2em;
+	font-size: .7em;
 	width: 75%;
 	background-color: rgb(63, 63, 63);
 }
@@ -119,4 +119,10 @@ table.technologies td {
 
 .reveal section img.no-shadow {
 	box-shadow: none;
+}
+
+.reveal .comic-purple {
+	font-family: 'Comic Sans', 'Comic Sans MS', cursive;
+	color: #A74AC7;
+	font-weight: bold;
 }
