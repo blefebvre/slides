@@ -116,3 +116,7 @@ table.technologies td {
 	box-shadow: none;
 	width: 10em;
 }
+
+.reveal section img.no-shadow {
+	box-shadow: none;
+}
