@@ -74,6 +74,7 @@
                     </aside>
                 </section>
 
+
                 <!-- AGENDA -->
                 <section data-state="bg-white">
                     <h2>Agenda</h2>
@@ -86,9 +87,9 @@
       |   |-- PhoneGap
       |   `-- AngularJS
       |-- Integrating 3rd party code
-      |   |-- PhoneGap plugins
       |   `-- Client side libraries
       |-- Dealing with device level APIs
+      |   `-- PhoneGap plugins
       `-- Template sharing on Angular's terms
 
 </pre>
@@ -136,17 +137,7 @@
 
                 <section>
                     <h2>PhoneGap + AEM</h2>
-                    <h2>The early days</h2>
-                    
-                    <aside class="notes">
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section data-background="img/geo-outdoors-phonegap-5.6.png" data-background-transition="slide" data-background-size="contain">
+                    <h3 class="fragment">The early days</h3>
                     
                     <aside class="notes">
                         <ul>
@@ -171,15 +162,15 @@
                     <h2>The Good</h2>
 
                     <ul>
-                        <li>Access to PhoneGap APIs</li>
                         <li>Content updates<sup>*</sup></li>
-                        <li>Nice demo</li>
-                        <li></li>
+                        <li>Access to PhoneGap APIs (v. 1.2)</li>
+                        <li>Opened up directly into iOS Sim</li>
+                        <li class="fragment">Nice demo</li>
                     </ul>
 
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>we implemented camera & location components</li>
                             <li></li>
                         </ul>
                     </aside>
@@ -198,7 +189,7 @@
 
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>for a cross platform solution, iOS only was no good</li>
                         </ul>
                     </aside>
                 </section>
@@ -232,6 +223,7 @@
                         <li>We just wrapped the mobile site</li>
                         <li>No page transitions</li>
                         <li>No visual differentiation from mobile site</li>
+                        <li class="fragment">Not 'App-y'</li>
                     </ul>
 
                     <aside class="notes">
@@ -267,7 +259,7 @@
                         <ul>
                             <li>like it or not</li>
                             <li>follow their guidelines</li>
-                            <li>WITH ALL THAT SAID... forget</li>
+                            <li>WITH ALL THAT SAID... forget about this</li>
                         </ul>
                     </aside>
                 </section>
@@ -285,8 +277,8 @@
 
                 <!-- Take 2 -->
                 <section>
-                    <h2>PhoneGap + AEM</h2>
-                    <h2>'Single page' apps</h2>
+                    <h2>PhoneGap + AEM x2</h2>
+                    <h3 class="fragment">'Single page' apps</h3>
                     
                     <aside class="notes">
                         <ul>
@@ -329,17 +321,157 @@
 
 
                 <section>
+
+                    <iframe src="http://brucelefebvre.com/single-page-nav/demo/" width="320" height="480"></iframe>
+
+                    <br>
+                    <a href="https://github.com/blefebvre/single-page-nav">github.com/blefebvre/single-page-nav</a>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>open sourced</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
                     <h2>The Bad</h2>
 
                     <ul>
                         <li><sup>*</sup>Literally a single HTML file (no matter how big your app)</li>
                         <li>Micro libs only</li>
+                        <li>Worked around content sync limitations</li>
                     </ul>
 
                     <aside class="notes">
                         <ul>
                             <li>scale :(</li>
                             <li>with no library, ended up reinventing the wheel</li>
+                            <li>no alterations of images</li>
+                            <li></li>
+                            <li>pretty good, but we can do better</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Take 3: AEM 6.0 -->
+                <section>
+                    <h2>PhoneGap + AEM x3</h2>
+                    <h3 class="fragment">AEM 6.0</h3>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>The Good</h2>
+
+                    <ul>
+                        <li>Access to PhoneGap APIs (v. 3.4)</li>
+                        <li>Delta content updates</li>
+                        <li>Single page app: FAST!</li>
+                        <li>Native app feel</li>
+                        <li>Cross platform</li>
+                        <li>AngularJS integration</li>
+                        <li>Content sync improvements</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>now DELTA - only dl what you need</li>
+                            <li>content sync beefed up</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="bg-white">
+                    <h2>Content sync handlers – new in 6.0</h2>
+
+                    <ul>
+                        <li>mobileapprootpage</li>
+                        <li>mobileapppages</li>
+                        <li>mobilepageassets</li>
+                        <li>mobilecontentlisting</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>manage the SPA</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>The Bad?</h2>
+
+                    <ul>
+                        <li class="fragment">Shifting dependencies</li>
+                        <li class="fragment">Constant platform evolution</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>shifting dependencies</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA -->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- The long and winding road
+      |-- <span class="highlight">Architecture</span>
+      |   |-- PhoneGap
+      |   `-- AngularJS
+      |-- Integrating 3rd party code
+      |   `-- Client side libraries
+      |-- Dealing with device level APIs
+      |   `-- PhoneGap plugins
+      `-- Template sharing on Angular's terms
+
+</pre>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+                
+
+
+                <!-- Tech -->
+                <section data-state="bg-white">
+                    <h2>Proven tech</h2>
+
+                    <table class="technologies">
+                        <tr>
+                            <td><img src="img/AEM_logo.png" /></td>
+                            <td><img src="img/pg_logo.png" /></td>
+                            <td><img src="img/angularjs-logo.png" /></td>
+                            <td><img src="img/cs_noun_3048.png" /></td>
+                        </tr>
+                    </table>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>AEM - 12 years</li>
+                            <li>PhoneGap - 5 yrs</li>
+                            <li>AngularJS - 5 yrs</li>
+                            <li>CS - since 5.4</li>
                         </ul>
                     </aside>
                 </section>
