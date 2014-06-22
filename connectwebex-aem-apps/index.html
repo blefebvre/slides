@@ -69,6 +69,8 @@
                     </p>
                     <aside class="notes">
                         <ul>
+                            <li>Adobe - 3 years</li>
+                            <li>
                             <li>built this integration, like to show it off</li>
                         </ul>
                     </aside>
@@ -83,14 +85,15 @@
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- Architecture
+      |-- 1. Device APIs
       |   |-- PhoneGap
-      |   `-- AngularJS
-      |-- Integrating 3rd party code
-      |   `-- Client side libraries
-      |-- Dealing with device level APIs
-      |   `-- PhoneGap plugins
-      `-- Template sharing on Angular's terms
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
+      |-- 2. 3rd party client libs
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      `-- 3. Template sharing on Angular's terms
 
 </pre>
                     </div>
@@ -153,7 +156,8 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>first crack at things</li>
+                            <li>understood mobile web, but new to PG</li>
                         </ul>
                     </aside>
                 </section>
@@ -163,7 +167,7 @@
                     <h2>The Good</h2>
 
                     <ul>
-                        <li>Content updates<sup>*</sup></li>
+                        <li>Content updates *</li>
                         <li>Access to PhoneGap APIs (v. 1.2)</li>
                         <li>Opened up directly into iOS Sim</li>
                         <li class="fragment">Nice demo</li>
@@ -172,7 +176,8 @@
                     <aside class="notes">
                         <ul>
                             <li>we implemented camera & location components</li>
-                            <li></li>
+                            <li>* next *</li>
+                            <li>it was a nice demo</li>
                         </ul>
                     </aside>
                 </section>
@@ -191,6 +196,8 @@
                     <aside class="notes">
                         <ul>
                             <li>for a cross platform solution, iOS only was no good</li>
+                            <li>* next *</li>
+                            <li>QR code?</li>
                         </ul>
                     </aside>
                 </section>
@@ -201,7 +208,7 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>this handy flowchart began making the rounds</li>
                         </ul>
                     </aside>
                 </section>
@@ -211,7 +218,7 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>now lives in manager's office</li>
                         </ul>
                     </aside>
                 </section>
@@ -229,7 +236,9 @@
 
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>yes, there's more</li>
+                            <li>* next *</li>
+                            <li>just not appy.. heading for ~></li>
                         </ul>
                     </aside>
                 </section>
@@ -260,7 +269,7 @@
                         <ul>
                             <li>like it or not</li>
                             <li>follow their guidelines</li>
-                            <li>WITH ALL THAT SAID... forget about this</li>
+                            <li>WITH ALL THAT SAID... lets put this in the past</li>
                         </ul>
                     </aside>
                 </section>
@@ -270,7 +279,7 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>look into the light</li>
                         </ul>
                     </aside>
                 </section>
@@ -293,7 +302,7 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>presented in 2013 at Evolve</li>
                         </ul>
                     </aside>
                 </section>
@@ -306,10 +315,10 @@
                     <ul>
                         <li>Access to PhoneGap APIs</li>
                         <li>Content updates</li>
-                        <li>Single page<sup>*</sup> app: FAST!</li>
-                        <li>Native app feel</li>
+                        <li>Single page** app: FAST!</li>
+                        <li>'Native' app feel</li>
                         <li>Cross platform</li>
-                        <li>Micro libs only</li>
+                        <li>Micro libs only***</li>
                     </ul>
 
                     <aside class="notes">
@@ -331,6 +340,7 @@
                     <aside class="notes">
                         <ul>
                             <li>open sourced</li>
+                            <li>VERY basic - not ready for primetime</li>
                         </ul>
                     </aside>
                 </section>
@@ -340,8 +350,8 @@
                     <h2>The Bad</h2>
 
                     <ul>
-                        <li><sup>*</sup>Literally a single HTML file (no matter how big your app)</li>
-                        <li>Micro libs only</li>
+                        <li>** Literally a single HTML file (no matter how big your app)</li>
+                        <li>*** Micro libs only</li>
                         <li>Worked around content sync limitations</li>
                     </ul>
 
@@ -360,8 +370,20 @@
                 <!-- Take 3: AEM 6.0 -->
                 <section data-state="bg-white">
                     <h2>PhoneGap + AEM x3</h2>
-                    <h3 class="fragment">AEM 6.0</h3>
+                    <h3 class="fragment">AEM Apps</h3>
+                    <h3 class="fragment">aka PhoneGap Enterprise</h3>
                     
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>TODO: Apps image</h2>
+
                     <aside class="notes">
                         <ul>
                             <li></li>
@@ -387,17 +409,17 @@
                         <ul>
                             <li>now DELTA - only dl what you need</li>
                             <li>content sync beefed up</li>
+                            <li>custom js libs killed in favour of angular</li>
                         </ul>
                     </aside>
                 </section>
 
-
                 <section>
-                    <h2>Content sync handlers – new in 6.0</h2>
+                    TODO: new image
+                    <h2>Content sync - new handlers</h2>
 
                     <ul>
                         <li>mobileapprootpage</li>
-                        <li>mobileapppages</li>
                         <li>mobilepageassets</li>
                         <li>mobilecontentlisting</li>
                     </ul>
@@ -420,7 +442,9 @@
 
                     <aside class="notes">
                         <ul>
-                            <li>shifting dependencies</li>
+                            <li>shifting dependencies - playing catchup</li>
+                            <li>NOT A MARKETING PITCH</li>
+                            <li>let's talk real scenarios</li>
                         </ul>
                     </aside>
                 </section>
@@ -434,15 +458,16 @@
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- <span class="highlight">Architecture</span>
+      |-- <span class="highlight">1. Device APIs</span>
       |   |-- PhoneGap
-      |   `-- AngularJS
-      |-- Integrating 3rd party code
-      |   `-- Client side libraries
-      |-- Dealing with device level APIs
-      |   `-- PhoneGap plugins
-      `-- Template sharing on Angular's terms
-
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
+      |-- 2. 3rd party client libs
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      `-- 3. Template sharing on Angular's terms
+      
 </pre>
                     </div>
                     <aside class="notes">
@@ -774,15 +799,16 @@ $routeProvider
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- Architecture
+      |-- 1. Device APIs
       |   |-- PhoneGap
-      |   `-- AngularJS
-      |-- <span class="highlight">Integrating 3rd party code</span>
-      |   `-- Client side libraries
-      |-- Dealing with device level APIs
-      |   `-- PhoneGap plugins
-      `-- Template sharing on Angular's terms
-
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
+      |-- 2. 3rd party client libs
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      `-- 3. Template sharing on Angular's terms
+      
 </pre>
                     </div>
                     <aside class="notes">
@@ -812,15 +838,16 @@ $routeProvider
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- Architecture
+      |-- 1. Device APIs
       |   |-- PhoneGap
-      |   `-- AngularJS
-      |-- Integrating 3rd party code
-      |   `-- Client side libraries
-      |-- <span class="highlight">Dealing with device level APIs</span>
-      |   `-- PhoneGap plugins
-      `-- Template sharing on Angular's terms
-
+      |   |   |-- CLI
+      |   |   `-- Plugins
+      |-- 2. 3rd party client libs
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      `-- 3. Template sharing on Angular's terms
+      
 </pre>
                     </div>
                     <aside class="notes">
@@ -850,15 +877,16 @@ $routeProvider
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- Architecture
+      |-- 1. Device APIs
       |   |-- PhoneGap
-      |   `-- AngularJS
-      |-- Integrating 3rd party code
-      |   `-- Client side libraries
-      |-- Dealing with device level APIs
-      |   `-- PhoneGap plugins
-      `-- <span class="highlight">Template sharing on Angular's terms</span>
-
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
+      |-- 2. 3rd party client libs
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      `-- 3. <span class="highlight">Template sharing on Angular's terms</span>
+      
 </pre>
                     </div>
                     <aside class="notes">
