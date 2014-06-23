@@ -342,7 +342,7 @@
 
                 <section>
 
-                    <iframe src="http://brucelefebvre.com/single-page-nav/demo/" width="320" height="480"></iframe>
+                    <iframe src="http://brucelefebvre.com/single-page-nav/demo/" width="400" height="600"></iframe>
 
                     <br>
                     <a href="https://github.com/blefebvre/single-page-nav">github.com/blefebvre/single-page-nav</a>
@@ -404,7 +404,11 @@
 
 
                 <section>
-                    <h2>TODO: Apps image</h2>
+
+                    <iframe src="http://localhost:4503/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home.html" width="400" height="600"></iframe>
+
+                    <br>
+                    <a href="http://localhost:4503/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home.html">localhost:4503/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home.html</a>
 
                     <aside class="notes">
                         <ul>
@@ -419,11 +423,77 @@
 
                     <ul>
                         <li>Access to PhoneGap APIs (v. 3.4)</li>
-                        <li>Delta content updates</li>
                         <li>Single page app: FAST!</li>
                         <li>Native app feel</li>
+                        <li>Adobe mobile services integration</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Mobile services -->
+                <section>
+
+                    <h2>Aside: Mobile services</h2>
+
+<pre><code>
+    // Track page view
+    if( window.ADB ) {
+        ADB.trackState( path, {} );
+    }
+
+
+    // Track timed event
+    if( window.ADB ) {
+        ADB.trackAction( 'updateApp', {} );
+        ADB.trackTimedActionStart( 'updateAppTimed', {} );
+
+        // do something
+
+        ADB.trackTimedActionEnd( 'updateAppTimed' );
+    }
+
+</code></pre>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>phonegap plugin!</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="img/mobile-services.png" data-background-transition="slide" data-background-size="contain">
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>mobile services</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-background="img/mobile-services-2.png" data-background-transition="slide" data-background-size="contain">
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>mobile services</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>The Good cont'd</h2>
+
+                    <ul>
                         <li>Cross platform</li>
                         <li>AngularJS integration</li>
+                        <li>Delta content updates</li>
                         <li>Content sync improvements</li>
                     </ul>
 
@@ -437,8 +507,8 @@
                 </section>
 
                 <section>
-                    TODO: new image
-                    <h2>Content sync - new handlers</h2>
+
+                    <h2>Aside: On content sync</h2>
 
                     <ul>
                         <li>mobileapprootpage</li>
@@ -458,8 +528,8 @@
                     <h2>The Bad?</h2>
 
                     <ul>
-                        <li class="fragment">Shifting dependencies</li>
                         <li class="fragment">Constant platform evolution</li>
+                        <li class="fragment">Shifting dependencies</li>
                     </ul>
 
                     <aside class="notes">
@@ -495,31 +565,6 @@
                     <aside class="notes">
                         <ul>
                             <li></li>
-                        </ul>
-                    </aside>
-                </section>
-                
-
-
-                <!-- Tech -->
-                <section data-state="bg-white">
-                    <h2>Proven tech</h2>
-
-                    <table class="technologies">
-                        <tr>
-                            <td><img src="img/AEM_logo.png" /></td>
-                            <td><img src="img/pg_logo.png" /></td>
-                            <td><img src="img/angularjs-logo.png" /></td>
-                            <td><img src="img/cs_noun_3048.png" /></td>
-                        </tr>
-                    </table>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>AEM - 12 years</li>
-                            <li>PhoneGap - 5 yrs</li>
-                            <li>AngularJS - 5 yrs</li>
-                            <li>CS - since 5.4</li>
                         </ul>
                     </aside>
                 </section>
@@ -575,6 +620,7 @@
                 </section>
 
 
+
                 <section>
                     <h2>PhoneGap CLI</h2>
 
@@ -598,30 +644,15 @@
   install &lt;platform&gt;
   run &lt;platform&gt;
   local [command]
-  <span class="fragment highlight-green">remote [command]</span>
+  remote [command]
   platform [command]
   plugin [command]
-  help [command]
-  version
 </pre>
                     </div>
                     <aside class="notes">
                         <ul>
                             <li>manage, automate builds</li>
-                            <li>remote</li>
-                        </ul>
-                    </aside>
-                </section>
-                
-
-                <section>
-                    <h2>PhoneGap Build</h2>
-                    <img src="img/buildbot-hero.png" class="pg-build" />
-
-                    <aside class="notes">
-                        <ul>
-                            <li>build apps without native SDKs</li>
-                            <li>integrates with github</li>
+                            <li>remote via PG build</li>
                         </ul>
                     </aside>
                 </section>
@@ -641,14 +672,14 @@
 
 
                 <section>
-                    <h2>Device-level APIs</h2>
+                    <h2>Device APIs</h2>
 
                     <ul>
                         <li>Camera</li>
                         <li>Accelerometer</li>
                         <li>File system</li>
                         <li>Contacts</li>
-                        <li>Events</li>
+                        <li>Lifecycle events</li>
                         <li>Connection</li>
                         <li>Notification</li>
                         <li>&lt;your plugin here&gt;</li>
@@ -657,19 +688,83 @@
                     <aside class="notes">
                         <ul>
                             <li>Features *not* avail to sites</li>
+                            <li>lifecycle: pause, resume, deviceready</li>
+                            <li>notification: popups, beeps, vibration</li>
                             <li>roll your own: reuse existing code</li>
                         </ul>
                     </aside>
                 </section>
 
 
-
                 <section>
-                    <img src="img/pg_apps_featured.png" class="no-bg"/>
+                    <h2>Plugins + AEM</h2>
+                    <h3>In 3 easy steps</h3>
+
+                    <ol>
+                        <li>Add the plugin to your hook</li>
+                        <li>Include it's .js file(s)</li>
+                        <li>Consume in your own script</li>
+                    </ol>
 
                     <aside class="notes">
                         <ul>
-                            <li>app samples</li>
+                            <li>fist two steps optional if the plugin is already used in your app</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-state="alert">
+                    <h2>Demo time</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>consume a new plugin: contacts</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA -->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- The long and winding road
+      |-- 1. Device APIs
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
+      |-- <span class="highlight">2. 3rd party client libs</span>
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      `-- 3. Template sharing on Angular's terms
+      
+</pre>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Topcoat</h2>
+
+                    <img src="img/topcoat.png" />
+
+                    <a href="http://topcoat.io/">topcoat.io/</a>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>geo outdoors consumes it</li>
+                            <li>fast! each component benchmarked</li>
+                            <li>css only!</li>
                         </ul>
                     </aside>
                 </section>
@@ -699,7 +794,6 @@
                         <li>Two-way data binding</li>
                         <li>Components (aka Directives)</li>
                         <li>Single page apps</li>
-                        <li>Dependency injection</li>
                         <li>Community</li>
                     </ul>
 
@@ -735,29 +829,6 @@
 
 
                 <section>
-                    <h2>Angular + AEM Challenges</h2>
-
-                    <ul>
-                        <li>Bring SPA paradigm to CMS</li>
-                        <li>Author mode VS. client side templating
-                            <ul>
-                                <li>Access control</li>
-                                <li>Model &amp; view separation</li>
-                                <li>Reusability of author’s skills</li>
-                            </ul>
-                        </li>
-                        <li>Performance</li>
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
                     <h2>Angular + AEM</h2>
 
                     <h3>Routing</h3>
@@ -773,7 +844,7 @@ $routeProvider
 
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>constructed automatically</li>
                         </ul>
                     </aside>
                 </section>
@@ -829,7 +900,7 @@ $routeProvider
       |   |-- Topcoat
       |   |-- AngularJS
       |   `-- Sharing with directives
-      `-- 3. Template sharing on Angular's terms
+      `-- <span class="highlight">3. Template sharing on Angular's terms</span>
       
 </pre>
                     </div>
@@ -841,40 +912,22 @@ $routeProvider
                 </section>
 
 
-                <section data-state="alert">
-                    <h2>Demo time</h2>
+                <section>
+                    <h2>Theoretically speaking</h2>
 
+                    <ul>
+                        <li>
+                        You have many things that you want to render in a similar fashion
+                        </li>
+                        <li>
+                            You want to leverage AEMs commerce features
+                        </li>
+                    </ul>
+                    
                     <aside class="notes">
                         <ul>
-                            <li>dev builds component</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <!-- AGENDA -->
-                <section data-state="bg-white">
-                    <h2>Agenda</h2>
-                    <div class="agenda">
-<pre>
-
-  `-- &lt;root&gt;
-      |-- The long and winding road
-      |-- 1. Device APIs
-      |   |-- PhoneGap
-      |   |   |-- CLI
-      |   |   `-- Plugins
-      |-- 2. 3rd party client libs
-      |   |-- Topcoat
-      |   |-- AngularJS
-      |   `-- Sharing with directives
-      `-- 3. Template sharing on Angular's terms
-      
-</pre>
-                    </div>
-                    <aside class="notes">
-                        <ul>
-                            <li></li>
+                            <li>not limited to products... books, properties, etc.</li>
+                            <li>one of Angular's strengths: templating</li>
                         </ul>
                     </aside>
                 </section>
@@ -885,46 +938,7 @@ $routeProvider
 
                     <aside class="notes">
                         <ul>
-                            <li>dev builds component</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <!-- AGENDA -->
-                <section data-state="bg-white">
-                    <h2>Agenda</h2>
-                    <div class="agenda">
-<pre>
-
-  `-- &lt;root&gt;
-      |-- The long and winding road
-      |-- 1. Device APIs
-      |   |-- PhoneGap
-      |   |   |-- CLI
-      |   |   `-- PhoneGap plugins
-      |-- 2. 3rd party client libs
-      |   |-- Topcoat
-      |   |-- AngularJS
-      |   `-- Sharing with directives
-      `-- 3. <span class="highlight">Template sharing on Angular's terms</span>
-      
-</pre>
-                    </div>
-                    <aside class="notes">
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section data-state="alert">
-                    <h2>Demo time</h2>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>dev builds component</li>
+                            <li>product demo</li>
                         </ul>
                     </aside>
                 </section>
@@ -981,25 +995,7 @@ $routeProvider
 
                 <section>
                     <h3>Thank you</h3>
-<pre class="beer-art">
-             _, . '__ . 
-          '_(_0o),(__)o().
-        ,o(__),_)o(_)O,(__)o
-      o(_,-o(_ )(),(__(_)oO)_
-      .O(__)o,__).(_ )o(_)Oo_)
-  .----|   |   |   |   |   |_)0
- /  .--|   |   |   |   |   |,_)
-|  /   |   |   |   |   |   |o(_)
-|  |   |   |   |   |   |   |_/`)
-|  |   |   |   |   |   |   |O_) 
-|  |   |   |   |   |   |   |
-|  \   |   |   |   |   |   |
- \  '--|   |   |   |   |   |
-  '----|   |   |   |   |   |
-       |   |   |   |   |   |
-  jgs  \   \   \   /   /   /
-        `"""""""""""""""""`
-</pre>
+
                     <p>
                         <a href="https://twitter.com/brucelefebvre">@brucelefebvre</a>
                     </p>
