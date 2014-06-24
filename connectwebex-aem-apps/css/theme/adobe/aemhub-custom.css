@@ -121,7 +121,11 @@ table.technologies td {
 	box-shadow: none;
 }
 
-.reveal .comic-purple {
+.reveal .slides section .fragment.highlight-comic-purple {
+	opacity: 1;
+}
+
+.reveal .slides section .fragment.highlight-comic-purple.visible {
 	font-family: 'Comic Sans', 'Comic Sans MS', cursive;
 	color: #A74AC7;
 	font-weight: bold;
