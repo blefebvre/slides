@@ -420,20 +420,16 @@
 
 <pre><code>
     // Track page view
-    if( window.ADB ) {
-        ADB.trackState( path, {} );
-    }
+    ADB.trackState( path, {} );
 
 
     // Track timed event
-    if( window.ADB ) {
-        ADB.trackAction( 'updateApp', {} );
-        ADB.trackTimedActionStart( 'updateAppTimed', {} );
+    ADB.trackAction( 'updateApp', {} );
+    ADB.trackTimedActionStart( 'updateAppTimed', {} );
 
-        // do something
+    // do something 
 
-        ADB.trackTimedActionEnd( 'updateAppTimed' );
-    }
+    ADB.trackTimedActionEnd( 'updateAppTimed' );
 
 </code></pre>
                     
@@ -730,6 +726,9 @@
                     <aside class="notes">
                         <ul>
                             <li>micro: one thing really well</li>
+                            <li>topcoat: geo outdoors consumes it</li>
+                            <li>fast! each component benchmarked</li>
+                            <li>css only!</li>
                         </ul>
                     </aside>
                 </section>
@@ -754,23 +753,6 @@ document.getElementById("container").innerHTML += "<p>content</p>";
                     <aside class="notes">
                         <ul>
                             <li>micro: one thing really well</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h2>Topcoat</h2>
-
-                    <img src="img/topcoat.png" />
-
-                    <a href="http://topcoat.io/">topcoat.io/</a>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>geo outdoors consumes it</li>
-                            <li>fast! each component benchmarked</li>
-                            <li>css only!</li>
                         </ul>
                     </aside>
                 </section>
@@ -1045,12 +1027,6 @@ $routeProvider
                             <a href="https://github.com/phonegap/phonegap/wiki/Debugging-in-PhoneGap" target="_blank">Debugging in PhoneGap</a>
                         </li>
                         <li>
-                            <a href="http://thenounproject.com/noun/package/#icon-No3048" target="_blank">Package</a> designed by <a href="http://thenounproject.com/hakan" target="_blank">Hakan Yalcin</a> from The Noun Project
-                        </li>
-                        <li>
-                            <a href="https://github.com/brianleroux/slides/tree/gh-pages/yow-2013" target="_blank">Reveal.js theme</a> by <a href="https://twitter.com/brianleroux" target="_blank">Brian LeRoux</a>
-                        </li>
-                        <li>
                             <a href="https://github.com/macdonst/OttawaJSMobileMicroFramework" target="_blank">Micro Frameworks for Mobile Web Apps</a> by <a href="https://twitter.com/macdonst" target="_blank">Simon MacDonald</a>
                         </li>
                     </ul>
@@ -1060,6 +1036,12 @@ $routeProvider
                 <section>
                     <h2>Creative</h2>
                     <ul>
+                        <li>
+                            <a href="https://github.com/brianleroux/slides/tree/gh-pages/yow-2013" target="_blank">Reveal.js theme</a> by <a href="https://twitter.com/brianleroux" target="_blank">Brian LeRoux</a>
+                        </li>
+                        <li>
+                            <a href="http://thenounproject.com/noun/package/#icon-No3048" target="_blank">Package</a> designed by <a href="http://thenounproject.com/hakan" target="_blank">Hakan Yalcin</a> from The Noun Project
+                        </li>
                         <li>
                             <a href="http://www.textfiles.com/underconstruction/" target="_blank">Under construction .gifs</a>
                         </li>
