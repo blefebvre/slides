@@ -150,7 +150,6 @@
                     <ul>
                         <li>Content updates *</li>
                         <li>Access to PhoneGap APIs (v. 1.2)</li>
-                        <li>Opened up directly into iOS Sim</li>
                         <li class="fragment">Nice demo</li>
                     </ul>
 
@@ -220,7 +219,7 @@
                     <h2>The Bad (cont'd)</h2>
 
                     <ul>
-                        <li>* We just wrapped the mobile site</li>
+                        <li>We just wrapped the mobile site</li>
                         <li>No page transitions</li>
                         <li>No visual differentiation from mobile site</li>
                         <li class="fragment">Not 'App-y'</li>
@@ -296,7 +295,7 @@
                     <ul>
                         <li>Access to PhoneGap APIs</li>
                         <li>Content updates</li>
-                        <li>Single page** app: FAST!</li>
+                        <li>Single page app**: FAST!</li>
                         <li>'Native' app feel</li>
                         <li>Cross platform</li>
                         <li>Micro libs only***</li>
@@ -331,8 +330,8 @@
                     <h2>The Bad</h2>
 
                     <ul>
-                        <li>** Literally a single HTML file</li>
-                        <li>*** Micro libs only</li>
+                        <li>Literally a single HTML file</li>
+                        <li>Micro libs only</li>
                         <li>Worked around content sync limitations</li>
                     </ul>
 
@@ -369,7 +368,13 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li></li>
+                            <li>give marketing control
+                                <ul>
+                                    <li>like over their web content</li>
+                                    <li>reduce burden on IT</li>
+                                    <li>focus on dev new experiences instead of simply maintaining old ones</li>
+                                </ul>
+                            </li>
                         </ul>
                     </aside>
                 </section>
@@ -596,19 +601,6 @@
                 <section>
                     <h2>PhoneGap CLI</h2>
 
-                    <h4>as of 3.0</h4>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>Command line interface</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h2>CLI commands</h2>
-
                     <div class="cli-commands">
 <pre>
   create &lt;path&gt;
@@ -619,8 +611,10 @@
   remote [command]
 </pre>
                     </div>
+
                     <aside class="notes">
                         <ul>
+                            <li>as of 3.0</li>
                             <li>manage, automate builds</li>
                             <li>remote via PG build</li>
                         </ul>
@@ -631,7 +625,7 @@
                 <section>
                     <h2>Plugins</h2>
 
-                    <img src="img/app-vs-site.png" class="no-bg"/>
+                    <img src="img/app-vs-site.png" class="no-bg" width="50%"/>
 
                     <aside class="notes">
                         <ul>
@@ -723,6 +717,48 @@
                 </section>
 
 
+                <!-- Choice -->
+                <section>
+                    <h2>Micro over full stack</h2>
+
+                    <ul>
+                        <li><a href="https://github.com/ftlabs/fastclick">Fastclick</a> for click delays</li>
+                        <li><a href="http://topcoat.io/">Topcoat</a> over jQuery Mobile</li>
+                        <li>Javascript over jQuery</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>micro: one thing really well</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Javascript over jQuery?</h2>
+
+<pre><code>
+// Selectors
+var $ = document.querySelectorAll.bind(document);
+
+// Class manipulation
+document.body.classList.add('hasJS');
+document.body.classList.remove('hasJS');
+
+// DOM manipulation
+document.getElementById("container").innerHTML += "<p>content</p>";
+</code></pre>
+                    
+
+                    <aside class="notes">
+                        <ul>
+                            <li>micro: one thing really well</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
                 <section>
                     <h2>Topcoat</h2>
 
@@ -739,6 +775,12 @@
                     </aside>
                 </section>
 
+
+                <!-- Choice -->
+                <section>
+                    <h2>Modular over monolithic</h2>
+
+                </section>
 
 
                 <!-- Angular -->
@@ -760,9 +802,9 @@
                     <h2>AngularJS</h2>
 
                     <ul>
+                        <li>Modular</li>
                         <li>Opinionated</li>
                         <li>Two-way data binding</li>
-                        <li>Components (aka Directives)</li>
                         <li>Single page apps</li>
                         <li>Community</li>
                     </ul>
@@ -1007,6 +1049,9 @@ $routeProvider
                         </li>
                         <li>
                             <a href="https://github.com/brianleroux/slides/tree/gh-pages/yow-2013" target="_blank">Reveal.js theme</a> by <a href="https://twitter.com/brianleroux" target="_blank">Brian LeRoux</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/macdonst/OttawaJSMobileMicroFramework" target="_blank">Micro Frameworks for Mobile Web Apps</a> by <a href="https://twitter.com/macdonst" target="_blank">Simon MacDonald</a>
                         </li>
                     </ul>
                 </section>
