@@ -85,14 +85,14 @@
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- 1. Device APIs
-      |   |-- PhoneGap
-      |   |   |-- CLI
-      |   |   `-- PhoneGap plugins
-      |-- 2. 3rd party client libs
+      |-- 1. 3rd party client libs
       |   |-- Topcoat
       |   |-- AngularJS
       |   `-- Sharing with directives
+      |-- 2. Device APIs
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
       `-- 3. Template sharing on Angular's terms
 
 </pre>
@@ -189,16 +189,6 @@
                     <aside class="notes">
                         <ul>
                             <li>this handy flowchart began making the rounds</li>
-                        </ul>
-                    </aside>
-                </section>
-
-                <!-- Office -->
-                <section data-background="img/office.jpg" data-background-transition="slide" data-background-size="contain">
-                    
-                    <aside class="notes">
-                        <ul>
-                            <li>office</li>
                         </ul>
                     </aside>
                 </section>
@@ -523,14 +513,206 @@
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- <span class="highlight">1. Device APIs</span>
-      |   |-- PhoneGap
-      |   |   |-- CLI
-      |   |   `-- PhoneGap plugins
-      |-- 2. 3rd party client libs
+      |-- 1. <span class="highlight">3rd party client libs</span>
       |   |-- Topcoat
       |   |-- AngularJS
       |   `-- Sharing with directives
+      |-- 2. Device APIs
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
+      `-- 3. Template sharing on Angular's terms
+      
+</pre>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Choice -->
+                <section>
+                    <h2>Micro over full stack</h2>
+
+                    <ul>
+                        <li><a href="https://github.com/ftlabs/fastclick">Fastclick</a> for click delays</li>
+                        <li><a href="http://topcoat.io/">Topcoat</a> over jQuery Mobile</li>
+                        <li>Javascript over jQuery</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>micro: one thing really well</li>
+                            <li>topcoat: geo outdoors consumes it</li>
+                            <li>fast! each component benchmarked</li>
+                            <li>css only!</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Javascript over jQuery?</h2>
+
+<pre><code>
+// Selectors
+var $ = document.querySelectorAll.bind(document);
+
+// Class manipulation
+document.body.classList.add('hasJS');
+document.body.classList.remove('hasJS');
+
+// DOM manipulation
+document.getElementById("container").innerHTML += "<p>content</p>";
+</code></pre>
+                    
+
+                    <aside class="notes">
+                        <ul>
+                            <li>micro: one thing really well</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Choice -->
+                <section>
+                    <h2>Modular over monolithic</h2>
+
+                </section>
+
+
+                <!-- Angular -->
+                <section data-state="bg-white">
+                    <h2>AngularJS</h2>
+
+                    <table class="technologies">
+                        <tr>
+                            <td><img src="img/AEM_logo.png" /></td>
+                            <td><img src="img/pg_logo.png" /></td>
+                            <td class="highlight-pink"><img src="img/angularjs-logo.png" /></td>
+                            <td><img src="img/cs_noun_3048.png" /></td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                <section>
+                    <h2>AngularJS</h2>
+
+                    <ul>
+                        <li>Modular</li>
+                        <li>Opinionated</li>
+                        <li>Two-way data binding</li>
+                        <li>Single page apps</li>
+                        <li>Community</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Listened to the people</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>AngularJS Projects</h2>
+
+                    <ul>
+                        <li>
+                            Ionic Framework
+                        </li>
+                        <li>
+                            Angular Snap.js
+                        </li>
+                        <li>
+                            angular-phonegap-ready
+                        </li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>open source projects built on angular</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Angular + AEM</h2>
+
+                    <h3>Routing</h3>
+
+<pre><code>
+$routeProvider
+    .when('/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home', {
+        templateUrl: 'home.template.html' + cacheKiller,
+        controller: 'geometrixxoutdoorsenhome'
+    })
+
+</code></pre>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>constructed automatically</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Angular + AEM</h2>
+
+                    <h3>Controllers</h3>
+
+<pre><code>
+// Controller for page 'home'
+.controller('geometrixxoutdoorsenhome', 
+    ['$scope', '$http',
+        function($scope, $http) {
+            var data = $http.get('home.angular.json' + cacheKiller);
+
+            /* swipe_carousel component controller */
+            data.then(function(response) {
+                $scope.playSpeed = 
+                    response.data["content-par/swipe_carousel"].playSpeed;
+                $scope.contentparngswipecarousel = 
+                    response.data["content-par/swipe_carousel"].items;
+            });
+            
+        }
+    ])
+
+</code></pre>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>wiring up the model</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- AGENDA -->
+                <section data-state="bg-white">
+                    <h2>Agenda</h2>
+                    <div class="agenda">
+<pre>
+
+  `-- &lt;root&gt;
+      |-- The long and winding road
+      |-- 1. 3rd party client libs
+      |   |-- Topcoat
+      |   |-- AngularJS
+      |   `-- Sharing with directives
+      |-- 2. <span class="highlight">Device APIs</span>
+      |   |-- PhoneGap
+      |   |   |-- CLI
+      |   |   `-- PhoneGap plugins
       `-- 3. Template sharing on Angular's terms
       
 </pre>
@@ -693,208 +875,15 @@
 
   `-- &lt;root&gt;
       |-- The long and winding road
-      |-- 1. Device APIs
-      |   |-- PhoneGap
-      |   |   |-- CLI
-      |   |   `-- PhoneGap plugins
-      |-- <span class="highlight">2. 3rd party client libs</span>
+      |-- 1. 3rd party client libs
       |   |-- Topcoat
       |   |-- AngularJS
       |   `-- Sharing with directives
-      `-- 3. Template sharing on Angular's terms
-      
-</pre>
-                    </div>
-                    <aside class="notes">
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <!-- Choice -->
-                <section>
-                    <h2>Micro over full stack</h2>
-
-                    <ul>
-                        <li><a href="https://github.com/ftlabs/fastclick">Fastclick</a> for click delays</li>
-                        <li><a href="http://topcoat.io/">Topcoat</a> over jQuery Mobile</li>
-                        <li>Javascript over jQuery</li>
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>micro: one thing really well</li>
-                            <li>topcoat: geo outdoors consumes it</li>
-                            <li>fast! each component benchmarked</li>
-                            <li>css only!</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h2>Javascript over jQuery?</h2>
-
-<pre><code>
-// Selectors
-var $ = document.querySelectorAll.bind(document);
-
-// Class manipulation
-document.body.classList.add('hasJS');
-document.body.classList.remove('hasJS');
-
-// DOM manipulation
-document.getElementById("container").innerHTML += "<p>content</p>";
-</code></pre>
-                    
-
-                    <aside class="notes">
-                        <ul>
-                            <li>micro: one thing really well</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <!-- Choice -->
-                <section>
-                    <h2>Modular over monolithic</h2>
-
-                </section>
-
-
-                <!-- Angular -->
-                <section data-state="bg-white">
-                    <h2>AngularJS</h2>
-
-                    <table class="technologies">
-                        <tr>
-                            <td><img src="img/AEM_logo.png" /></td>
-                            <td><img src="img/pg_logo.png" /></td>
-                            <td class="highlight-pink"><img src="img/angularjs-logo.png" /></td>
-                            <td><img src="img/cs_noun_3048.png" /></td>
-                        </tr>
-                    </table>
-                </section>
-
-
-                <section>
-                    <h2>AngularJS</h2>
-
-                    <ul>
-                        <li>Modular</li>
-                        <li>Opinionated</li>
-                        <li>Two-way data binding</li>
-                        <li>Single page apps</li>
-                        <li>Community</li>
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>Listened to the people</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h2>AngularJS Projects</h2>
-
-                    <ul>
-                        <li>
-                            Ionic Framework
-                        </li>
-                        <li>
-                            Angular Snap.js
-                        </li>
-                        <li>
-                            angular-phonegap-ready
-                        </li>
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>open source projects built on angular</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h2>Angular + AEM</h2>
-
-                    <h3>Routing</h3>
-
-<pre><code>
-$routeProvider
-    .when('/content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en/home', {
-        templateUrl: 'home.template.html' + cacheKiller,
-        controller: 'geometrixxoutdoorsenhome'
-    })
-
-</code></pre>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>constructed automatically</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-
-                <section>
-                    <h2>Angular + AEM</h2>
-
-                    <h3>Controllers</h3>
-
-<pre><code>
-// Controller for page 'home'
-.controller('geometrixxoutdoorsenhome', 
-    ['$scope', '$http',
-        function($scope, $http) {
-            var data = $http.get('home.angular.json' + cacheKiller);
-
-            /* swipe_carousel component controller */
-            data.then(function(response) {
-                $scope.playSpeed = 
-                    response.data["content-par/swipe_carousel"].playSpeed;
-                $scope.contentparngswipecarousel = 
-                    response.data["content-par/swipe_carousel"].items;
-            });
-            
-        }
-    ])
-
-</code></pre>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>wiring up the model</li>
-                        </ul>
-                    </aside>
-                </section>
-
-
-                <!-- AGENDA -->
-                <section data-state="bg-white">
-                    <h2>Agenda</h2>
-                    <div class="agenda">
-<pre>
-
-  `-- &lt;root&gt;
-      |-- The long and winding road
-      |-- 1. Device APIs
+      |-- 2. Device APIs
       |   |-- PhoneGap
       |   |   |-- CLI
       |   |   `-- PhoneGap plugins
-      |-- 2. 3rd party client libs
-      |   |-- Topcoat
-      |   |-- AngularJS
-      |   `-- Sharing with directives
-      `-- <span class="highlight">3. Template sharing on Angular's terms</span>
+      `-- 3. <span class="highlight">Template sharing on Angular's terms</span>
       
 </pre>
                     </div>
