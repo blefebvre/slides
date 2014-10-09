@@ -50,8 +50,31 @@
 				</p>
 			</section>
 
+
 			<section>
-				<h2>Hi</h2>
+				<h2>Hello</h2>
+
+				<aside class="notes">
+					notes
+				</aside>
+			</section>
+
+
+			<section>
+				<div>
+					define:enterprise
+				</div>
+				<div class="fragment">
+					en·ter·prise
+				</div>
+				<div class="fragment">
+					ˈen(t)ərˌprīz/
+				</div>
+				<ol>
+					<li class="fragment">
+						a project or undertaking, typically one that is difficult or requires effort.
+					</li>
+				</ol>
 
 				<aside class="notes">
 					notes
@@ -118,7 +141,7 @@ for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
 		// Full list of configuration options available here:
 		// https://github.com/hakimel/reveal.js#configuration
 		Reveal.initialize({
-			controls: true,
+			controls: false,
 			progress: true,
 			history: true,
 			center: true,
@@ -130,14 +153,14 @@ for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
 			height: 700,
 
 		    // Factor of the display size that should remain empty around the content
-		    margin: 0,
+		    margin: 0.06,
 
 			// Bounds for smallest/largest possible scale to apply to content
 			minScale: 0.2,
 			maxScale: 5.0,
 
-			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+			theme: 'pgday', // available themes are in /css/theme
+			transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 			// Parallax scrolling
 			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
