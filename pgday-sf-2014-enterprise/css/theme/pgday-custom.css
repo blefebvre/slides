@@ -1,0 +1,41 @@
+/* pgday styles so I don't have to keep re-sassing the sass theme */
+
+.reveal .white,
+.reveal a.white:not(.image) {
+	color: #FFF;
+	background-color: #353535;
+	padding: 0.3em 0.2em;
+}
+
+/* adobe logo */
+body:after {
+  content: url(../../img/logo.svg);
+  width: 74px;
+  height: 126px;
+  position: fixed;
+  top: 0px;
+  right: 2em;
+}
+
+.reveal {
+	background-color: #DDD;
+}
+
+.reveal .left{
+	text-align: left;
+}
+
+.reveal .box {
+	padding: 1em;
+	border: 1px solid #b5b5b5;
+}
+
+.reveal h2 {
+	margin-bottom: 1em;
+}
+
+.reveal section div, 
+.reveal section ol {
+	font-size: 130%;
+	line-height: 130%;
+}
