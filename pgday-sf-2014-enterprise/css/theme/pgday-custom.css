@@ -17,9 +17,11 @@ body:after {
   right: 2em;
 }
 
+/*
 .reveal {
 	background-color: #DDD;
 }
+*/
 
 .reveal .left{
 	text-align: left;
@@ -38,4 +40,14 @@ body:after {
 .reveal section ol {
 	font-size: 130%;
 	line-height: 130%;
+}
+
+.bg-gray .reveal .state-background {
+  background-color: #DDD;
+}
+
+.reveal ol, .reveal ul,
+.reveal h2 {
+	text-align: left;
+	display: block;
 }
