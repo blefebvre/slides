@@ -59,3 +59,13 @@ body:after {
 	max-height: 200px;
 	vertical-align:middle;
 }
+
+.reveal .screenshot {
+	border: none;
+	box-shadow: none;
+	max-width: 300px;
+}
+
+.reveal a:not(.image) {
+	text-decoration: underline;
+}
