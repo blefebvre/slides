@@ -37,7 +37,8 @@ body:after {
 }
 
 .reveal section div, 
-.reveal section ol {
+.reveal section ol, 
+.reveal section ul {
 	font-size: 130%;
 	line-height: 130%;
 }
@@ -50,4 +51,11 @@ body:after {
 .reveal h2 {
 	text-align: left;
 	display: block;
+}
+
+.reveal .logo {
+	border: none;
+	width: 200px;
+	max-height: 200px;
+	vertical-align:middle;
 }
