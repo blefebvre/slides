@@ -1,365 +1,553 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-	<meta charset="utf-8">
+<meta name="keywords">
+<meta name="description">
 
-	<title>Enterprise: not just a dirty word any more</title>
-
-	<meta name="description" content="This talk will focus on the integration of Adobe Experience Manager (AEM) and PhoneGap, affectionately known as PhoneGap Enterprise. We'll cover why you should care (hint: $) and bring you up to speed on what the platform can do for you and your clients. I'll dive into a technical review of the architecture, present the analytics dashboards and content authoring tools included with the integration, and demo the development workflow of building a real app with PhoneGap Enterprise.">
-	<meta name="author" content="Bruce Lefebvre">
-
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<link rel="stylesheet" href="css/reveal.min.css">
-	<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-	<link rel="stylesheet" href="css/theme/pgday-custom.css" id="theme">
-
-	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="lib/css/zenburn.css">
-
-	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-	<script>
-		if( window.location.search.match( /print-pdf/gi ) ) {
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = 'css/print/pdf.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		}
-	</script>
-
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
+<title>enterprise: not just a dirty word any more</title>
 </head>
-
 <body>
 
 	<div class="reveal">
-
-		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-			<section data-background="img/building.jpg">
+
+		<section data-background="./index_files/building.png">
+			<div class="title section">
 				<h1 class="white">ENTERPRISE</h1>
-				<h3 class="white">Not just a dirty word any more</h3>
-				<br>
-				<p>
-					<a class="white" href="http://brucelefebvre.com/">Bruce Lefebvre</a>
-				</p>
-			</section>
+			</div>
+				<div class="title section">
+					<h3 class="white">Not just a dirty word any more</h3>
+				</div>
+					<div class="spacer section"><br>
+			</div>
 
 
-			<section data-state="bg-gray">
-				<h3>Hello</h3>
-
-				<p>
-					<a href="https://twitter.com/brucelefebvre">@brucelefebvre</a>
-				</p>
-			</section>
+		</section>
 
 
-			<section data-background="img/define_enterprise.png" data-background-position="0px 0px">
-				<div class="box">
-					<div class="left fragment">
-						en·ter·prise<br/>
-						ˈen(t)ərˌprīz/
-					</div>
-					<br>
-					<ol>
-						<li class="fragment">
-							a project or undertaking, typically one that is difficult or requires effort.
-						</li>
-					</ol>
+
+
+		<section data-state="bg-gray">
+			<div class="prez-page page"><div class="title section">
+				<h3>Hello</h3></div>
+			<div class="title section">
+				<h4 class="blue">@brucelefebvre</h4></div>
+
+			</div>
+
+		</section>
+
+
+
+
+
+
+
+		<section data-background="/content/phonegap/brucelefebvre/pgday-talk/en/home/define-enterprise.img.png" >
+			<div class="prez-page page"><div class="parbase image section">
+
+
+
+
+
+
+				<img src="./index_files/1414135329710.jpg" alt="Christmas-Present-red" title="Christmas-Present-red">
+
+
+
+
+			</div>
+			<div class="title section">
+				<h3>Once upon a time...</h3></div>
+
+			</div>
+
+		</section>
+
+
+
+
+
+
+
+		<section data-state="bg-gray">
+			<div class="prez-page page"><div class="title section">
+				<h2>Goal</h2></div>
+				<div class="text parbase section">
+					<p><span class="fragment" data-fragment-index="0">• Sell you PhoneGap Enterprise!!1</span></p>
+
+
 				</div>
 
-				<aside class="notes">
-					close enough
-				</aside>
-			</section>
+			</div>
 
-
-			<section data-state="bg-gray">
-				<h2>Goal</h2>
-
-				<ul>
-					<li class='fragment'>
-						Sell you PhoneGap Enterprise!!!1
-					</li>
-				</ul>
-			</section>
+		</section>
 
 
 
-			<section data-state="bg-gray">
-				<h2>Goal</h2>
-
-				<ul>
-					<li>
-						<strike>
-							Sell you PhoneGap Enterprise!!!1
-						</strike>
-					</li>
-				</ul>
-			</section>
 
 
-			<section data-state="bg-gray">
-				<h2>Actual Goals</h2>
-
-				<ul>
-					<li>
-						Introduce the integration
-					</li>
-					<li class='fragment'>
-						Show you what it can do
-					</li>
-				</ul>
-			</section>
 
 
-			<section data-state="bg-gray">
-				<h2>Agenda</h2>
-
-				<ol class='block'>
-					<li>
-						AEM crash course
-					</li>
-					<li>
-						PhoneGap and AEM
-					</li>
-					<li>
-						App management demo
-					</li>
-				</ol>
-			</section>
+		<section data-state="bg-gray">
+			<div class="prez-page page"><div class="title section">
+				<h2>Goal</h2></div>
+				<div class="text parbase section">
+					<p>• <span class="strikethrough">Sell you PhoneGap Enterprise!!1</span></p>
 
 
-			<section data-state="bg-gray">
-				<img src='img/content_mgmt.png' alt='Rebecca Lieb (@lieblink): ex-Googler: “Managing content is hard. We tried it at Google &amp; decided to focus on easier stuff, like self-driving cars."'/>
-			</section>
-<!-- Code
-			<section>
-				<h2>Pretty Code</h2>
-				<pre><code data-trim contenteditable>
-function linkify( selector ) {
-if( supports3DTransforms ) {
+				</div>
 
-var nodes = document.querySelectorAll( selector );
+			</div>
 
-for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-  var node = nodes[i];
-
-  if( !node.className ) {
-    node.className += ' roll';
-  }
-}
-}
-}
-				</code></pre>
-				<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-			</section>
--->
-
-			
-			<section>
-				<img src='img/AEM_logo.png' alt='AEM logo' />
-
-				<h3>Adobe Experience Manager</h3>
-
-				<aside class="notes">
-				</aside>
-			</section>
-
-			
-			<section data-background-size="contain" data-background="img/list_of_aem_customers.png">
-				<aside class="notes">
-					customer list
-				</aside>
-			</section>
+		</section>
 
 
-			<section>
-				<h2>AEM at a glance</h3>
-
-				<ul>
-					<li>
-						Create, manage, and optimize digital experiences
-					</li>
-					<li class="fragment">
-						Double click install
-					</li>
-					<li class="fragment">
-						Touch friendly UI
-					</li>
-					<li class="fragment">
-						Templates developed in JSP, ESP, or Sightly
-					</li>
-					<li class="fragment">
-						Built on an open foundation
-					</li>
-				</ul>
-
-				<aside class="notes">
-					Sites, apps, social communities, digtal assets, and forms<br/>
-					Highly Scalable without the complexities of heavier JEE application<br/>
-				</aside>
-			</section>
 
 
-			<section>
-				<h2>Open foundation</h2>
-				
-				<img src='img/oak.png' class='fragment logo' />
-				<img src='img/sling.png' class='fragment logo' />
-				<img src='img/felix.png' class='fragment logo' />
-				<img src='img/lucene.png' class='fragment logo' />
-
-				<aside class="notes">
-					
-				</aside>
-			</section>
-
-			
-			<section>
-				<img src='img/AEM_logo.png' class='logo' alt='AEM logo' /> +
-				<img src='img/pg_logo.png' class='logo' alt='PhoneGap logo' />
-				
-				<h3>PhoneGap Enterprise</h3>
-
-				<aside class="notes">
-					PhoneGap + AEM
-				</aside>
-			</section>
 
 
-			<section>
-				<h2>Highlights</h3>
 
-				<ul>
-					<li>
-						Content authoring by non-technical users
-					</li>
-					<li class='fragment'>
-						AEM Apps command center
-					</li>
-					<li class='fragment'>
-						Over-the-air content updates
-					</li>
-					<li class='fragment'>
-						PhoneGap build integration
-					</li>
-					<li class='fragment'>
-						Instrumented for Mobile Services analytics
-					</li>
-				</ul>
-			</section>
+		<section data-state="bg-gray">
+			<div class="prez-page page"><div class="title section">
+				<h2>Actual Goals</h2></div>
+				<div class="text parbase section">
+					<p>• Introduce the integration</p>
 
-			
-			<section data-background="img/mobile-services-2.png" data-background-size="contain">
-
-			</section>
+					<p><span class="fragment" data-fragment-index="0">• Show you what it can do</span></p>
 
 
-			<section>
-				<img src='img/kitchen-sink.png' class='screenshot' alt='Screenshot of the Kitchen Sink app running on device' />
+				</div>
 
-				<h3>Demo time</h3>
+			</div>
 
-			</section>
-
-
-			<section>
-				<h2>Tech resources</h2>
-				<ul>
-					<li>
-						<a href='https://github.com/blefebvre/aem-phonegap-kitchen-sink'>AEM PhoneGap Kitchen Sink</a>
-					</li>
-					<li>
-						<a href='https://github.com/blefebvre/aem-phonegap-starter-kit'>AEM PhoneGap Starter Kit</a>
-					</li>
-				</ul>
-			</section>
+		</section>
 
 
-			<section data-background="img/building.jpg">
-				<h1 class="white">Thanks!</h1>
-				<h3 class="white fragment">Questions?</h3>
-				<br>
-				<p>
-					<a class="white" href="https://twitter.com/brucelefebvre">@brucelefebvre</a>
-				</p>
-			</section>
 
 
-			<section>
-				<h2>Creative resources</h2>
-				<ul>
-					<li>
-						<a href="http://www.quickmeme.com/meme/358po1" target="_blank">Business cat, 4th quarter</a>
-					</li>
-					<li>
-						<a href="https://www.google.com" target="_blank">Google search bar</a>
-					</li>
-				</ul>
 
-				<aside class="notes">
-				</aside>
-			</section>
+
+
+		<section data-state="bg-gray">
+			<div class="prez-page page"><div class="title section">
+				<h2>Agenda</h2></div>
+				<div class="text parbase section">
+					<ol>
+						<li>AEM crash course</li>
+						<li>Intro to PhoneGap Enterprise</li>
+						<li>App management demo</li>
+					</ol>
+
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+
+
+
+
+		<section data-state="bg-gray">
+			<div class="prez-page page"><div class="parbase image section">
+
+
+
+
+
+
+				<img src="./index_files/1414135329883.png" alt="content_mgmt" title="content_mgmt">
+
+
+
+
+			</div>
 
 		</div>
 
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="parbase image section">
+
+
+
+
+
+
+			<img src="./index_files/1414135329146.png" alt="AEM_logo" title="AEM_logo">
+
+
+
+
+		</div>
+		<div class="title section">
+			<h3>Adobe Experience Manager</h3></div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section data-background="./index_files/customers.png" data-background-size="contain">
+		<div class="prez-page page">
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="title section">
+			<h2>AEM at a glance</h2></div>
+			<div class="text parbase section">
+				<p>• Create, manage, and optimize digital experiences</p>
+
+				<p><span class="fragment" data-fragment-index="0">• Double click install</span></p>
+
+				<p><span class="fragment" data-fragment-index="1">• Touch friendly (&amp; fun) UI</span></p>
+
+				<p><span class="fragment" data-fragment-index="2">• Templates developed in JSP, ESP, or Sightly</span></p>
+
+				<p><span class="fragment" data-fragment-index="3">• Built on an open foundation</span></p>
+
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="title section">
+			<h2>Open foundation</h2></div>
+			<div class="four-image-row section"><table class="four-image-row">
+				<tbody><tr>
+					<td class="fragment" data-fragment-index="0">
+
+
+
+
+
+
+
+						<img src="./index_files/1414135328428.png" alt="oak" title="oak">
+
+
+
+
+
+					</td>
+					<td class="fragment" data-fragment-index="1">
+
+
+
+
+
+
+
+						<img src="./index_files/1414135328036.png" alt="sling" title="sling">
+
+
+
+
+
+					</td>
+					<td class="fragment" data-fragment-index="2">
+
+
+
+
+
+
+
+						<img src="./index_files/1414135329199.png" alt="felix" title="felix">
+
+
+
+
+
+					</td>
+					<td class="fragment" data-fragment-index="3">
+
+
+
+
+
+
+
+						<img src="./index_files/1414135328824.png" alt="lucene" title="lucene">
+
+
+
+
+
+					</td>
+				</tr>
+			</tbody></table></div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="two-images-plus section"><table class="two-images-plus">
+			<tbody><tr>
+				<td>
+
+
+
+
+
+
+
+					<img src="./index_files/1414135329146.png" alt="AEM_logo" title="AEM_logo">
+
+
+
+
+
+				</td>
+				<td>
+					+
+				</td>
+				<td>
+
+
+
+
+
+
+
+					<img src="./index_files/1414135329485.png" alt="pg_logo" title="pg_logo">
+
+
+
+
+
+				</td>
+			</tr>
+		</tbody></table></div>
+		<div class="title section">
+			<h3>PhoneGap Enterprise</h3></div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="title section">
+			<h2>Highlights</h2></div>
+			<div class="text parbase section">
+				<p>• Content authoring by non-technical users</p>
+
+				<p><span class="fragment" data-fragment-index="0">• AEM Apps command center</span></p>
+
+				<p><span class="fragment" data-fragment-index="1">• Over-the-air content updates</span></p>
+
+				<p><span class="fragment" data-fragment-index="2">• PhoneGap Build integration</span></p>
+
+				<p><span class="fragment" data-fragment-index="3">• Instrumented for Adobe Mobile Services</span></p>
+
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section data-background="./index_files/mobile-services-2.png" data-background-size="contain">
+		<div class="prez-page page">
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="parbase image section">
+
+
+
+
+
+
+			<img src="./index_files/1414135329135.png" alt="command_center" title="command_center">
+
+
+
+
+		</div>
+		<div class="title section">
+			<h3>Demo time</h3></div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="prez-page page"><div class="title section">
+			<h2>Tech resources</h2></div>
+			<div class="text parbase section">
+				<p>•&nbsp;<a href="https://github.com/blefebvre/aem-pgday-talk-app">PhoneGap Day - Enterprise talk app</a></p>
+
+				<p>• <a href="https://github.com/blefebvre/aem-phonegap-kitchen-sink">AEM PhoneGap Kitchen Sink</a></p>
+
+				<p>• <a href="https://github.com/blefebvre/aem-phonegap-starter-kit">AEM PhoneGap Starter Kit</a></p>
+
+				<p>•&nbsp;<a href="http://docs.adobe.com/docs/jp/aem/6-0/develop/mobile/apps.html">Developing PhoneGap Apps in AEM</a></p>
+
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section data-background="./index_files/building.png">
+		<div class="prez-page page"><div class="title section">
+			<h1 class="white">Thanks!</h1></div>
+			<div class="title section">
+				<h3 class="white">Questions?</h3></div>
+				<div class="spacer section"><br></div>
+				<div class="title section">
+					<h4 class="white">@brucelefebvre</h4></div>
+
+				</div>
+
+			</section>
+
+
+
+
+
+
+
+			<section>
+				<div class="prez-page page"><div class="title section">
+					<h2>Creative resources</h2></div>
+					<div class="text parbase section">
+						<p>• <a href="https://www.lakewood-center.org/pages/Gift-Certificate">Gift image</a></p>
+
+						<p>• <a href="http://jackrabbit.apache.org/oak/">Jackrabbit Oak</a></p>
+
+						<p>• <a href="http://sling.apache.org/">Apache Sling</a></p>
+
+						<p>• <a href="http://felix.apache.org/">Apache Felix</a></p>
+
+						<p>• <a href="http://lucene.apache.org/core/">Apache Lucene</a></p>
+
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
 	</div>
 
-	<script src="lib/js/head.min.js"></script>
-	<script src="js/reveal.min.js"></script>
+
+
+	<link rel="stylesheet" href="./index_files/clientlibsall.css" type="text/css">
+	<script type="text/javascript" src="./index_files/clientlibsall.js"></script>
+
+
+
 
 	<script>
 
-		// Full list of configuration options available here:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: false,
-			progress: true,
-			history: true,
-			center: true,
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: false,
+		progress: true,
+		history: true,
+		center: true,
 
-			// The "normal" size of the presentation, aspect ratio will be preserved
-			// when the presentation is scaled to fit different resolutions. Can be
-			// specified using percentage units.
-			width: 960,
-			height: 700,
+		// The "normal" size of the presentation, aspect ratio will be preserved
+		// when the presentation is scaled to fit different resolutions. Can be
+		// specified using percentage units.
+		width: 960,
+		height: 700,
 
-		    // Factor of the display size that should remain empty around the content
-		    margin: 0.06,
+		// Factor of the display size that should remain empty around the content
+		margin: 0.06,
 
-			// Bounds for smallest/largest possible scale to apply to content
-			minScale: 0.2,
-			maxScale: 5.0,
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: 0.2,
+		maxScale: 5.0,
 
-			theme: 'pgday', // available themes are in /css/theme
-			transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+		theme: 'pgday', // available themes are in /css/theme
+		transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
 
-			// Parallax scrolling
-			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-			// parallaxBackgroundSize: '2100px 900px',
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
 
-			// Optional libraries used to extend on reveal.js
-			dependencies: [
-				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-			]
-		});
+		// Optional libraries used to extend on reveal.js
+		dependencies: [         ]
+	});
 
 	</script>
 
-</body>
-</html>
+</body></html>
